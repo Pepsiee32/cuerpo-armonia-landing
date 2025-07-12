@@ -92,7 +92,7 @@ export default function LandingPage() {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold text-dark-sage mb-4 tracking-tight">Cuerpo y Armonía</h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-dark-sage mb-4 tracking-tight">Cuerpo y Armonía - Estética Integral</h1>
             <p className="text-xl md:text-2xl text-sage font-medium mb-8">15 años cuidando tu bienestar</p>
           </div>
 
