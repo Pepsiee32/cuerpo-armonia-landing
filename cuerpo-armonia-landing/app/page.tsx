@@ -48,19 +48,24 @@ export default function LandingPage() {
         "Sí, recomendamos reservar cita previa para garantizar la disponibilidad del tratamiento deseado y brindarle la mejor atención personalizada.",
     },
     {
+      question: "¿Cómo saco un turno?",
+      answer:
+        "Podés contactarnos por WhatsApp o Instagram y coordinar tu cita. Te respondemos lo antes posible para brindarte un horario disponible.",
+    },
+    {
       question: "¿Qué métodos de pago aceptan?",
       answer:
-        "Aceptamos efectivo, tarjetas de débito y crédito, y transferencias bancarias. También ofrecemos planes de financiación para tratamientos extensos.",
+        "Aceptamos efectivo, tarjetas de débito/crédito, y transferencias bancarias. También contamos con promociones y Gift Cards.",
+    },
+    {
+      question: "¿Qué tipo de tratamientos ofrecen?",
+      answer:
+        "Contamos con tratamientos faciales, corporales, masajes, depilación láser y más. Siempre personalizados según tus necesidades.",
     },
     {
       question: "¿Los productos que utilizan son seguros?",
       answer:
         "Utilizamos únicamente productos de marcas reconocidas internacionalmente, todos dermatológicamente testados y aprobados por organismos sanitarios.",
-    },
-    {
-      question: "¿Ofrecen consultas gratuitas?",
-      answer:
-        "Sí, ofrecemos una consulta inicial gratuita donde evaluamos sus necesidades y recomendamos el tratamiento más adecuado para usted.",
     },
   ]
 
@@ -77,28 +82,38 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-off-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/placeholder.svg?height=800&width=1200"
-            alt="Spa relajante"
-            fill
-            className="object-cover opacity-30"
-          />
+                      <Image
+              src="/hero2.jpg?height=800&width=1200"
+              alt="Spa relajante"
+              fill
+              className="object-cover object-[center_57%]"
+            />
           <div className="absolute inset-0 bg-gradient-to-r from-sage/20 to-dark-sage/20" />
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="mb-8 animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold text-dark-sage mb-4 tracking-tight">Cuerpo y Armonía - Estética Integral</h1>
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto -mt-52">
+          <div className="mb-4 animate-fade-in">
+            <div className="-mb-20">
+              <Image
+                src="/logo-no-letter.svg"
+                alt="Cuerpo y Armonía Logo"
+                width={400}
+                height={400}
+                className="mx-auto"
+              />
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-dark-sage mb-4 tracking-tight">Cuerpo y Armonía</h1>
             <p className="text-xl md:text-2xl text-sage font-medium mb-8">15 años cuidando tu bienestar</p>
           </div>
 
           <Button
             size="lg"
             className="bg-sage hover:bg-dark-sage text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            onClick={() => window.open('https://wa.me/5491163746069', '_blank')}
           >
             <MessageCircle className="mr-2 h-5 w-5" />
             Reservar Cita
@@ -143,7 +158,7 @@ export default function LandingPage() {
                   <Heart className="h-8 w-8 text-sage" />
                 </div>
                 <h3 className="text-xl font-bold text-dark-sage mb-4">Bienestar Integral</h3>
-                <p className="text-sage">Enfoque holístico que cuida tu belleza exterior e interior</p>
+                <p className="text-sage">Equilibrio entre belleza exterior y salud interior para una transformación completa</p>
               </CardContent>
             </Card>
           </div>
@@ -151,37 +166,36 @@ export default function LandingPage() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 px-4 bg-white/50">
+      <section className="py-20 px-4 bg-sage">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Sobre Nosotros</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold text-dark-sage mb-6">
-                15 años de experiencia en belleza y bienestar
-              </h2>
-              <p className="text-lg text-sage mb-6 leading-relaxed">
-                En Cuerpo y Armonía creemos que la verdadera belleza nace del equilibrio entre cuerpo, mente y espíritu.
-                Durante más de una década, hemos sido el refugio de bienestar para cientos de personas que buscan cuidar
-                su imagen y renovar su energía.
-              </p>
-              <p className="text-lg text-sage mb-8 leading-relaxed">
-                Nuestro equipo de profesionales altamente capacitados utiliza las técnicas más avanzadas y productos de
-                primera calidad para ofrecerte resultados excepcionales en un ambiente de total relajación y confort.
-              </p>
-              <Button className="bg-sage hover:bg-dark-sage text-white rounded-full px-8 py-3">
-                Conoce más sobre nosotros
-              </Button>
-            </div>
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/placeholder.svg?height=600&width=500"
-                  alt="Centro de belleza"
-                  width={500}
-                  height={600}
-                  className="object-cover"
-                />
+              <div className="bg-white/90 rounded-3xl shadow-2xl p-10">
+                <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Sobre Nosotros</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold text-dark-sage mb-6">
+                  15 años de experiencia en belleza y bienestar
+                </h2>
+                <p className="text-lg text-sage mb-6 leading-relaxed">
+                  En Cuerpo y Armonía creemos que la verdadera belleza nace del equilibrio entre cuerpo, mente y espíritu.
+                  Durante más de una década, hemos sido el refugio de bienestar para cientos de personas que buscan cuidar
+                  su imagen y renovar su energía.
+                </p>
+                <p className="text-lg text-sage mb-8 leading-relaxed">
+                  Nuestro equipo de profesionales altamente capacitados utiliza las técnicas más avanzadas y productos de
+                  primera calidad para ofrecerte resultados excepcionales en un ambiente de total relajación y confort.
+                </p>
+                <Button className="bg-sage hover:bg-dark-sage text-white rounded-full px-8 py-3">
+                  Conoce más sobre nosotros
+                </Button>
               </div>
+            </div>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-96 z-0">
+              <Image
+                src="/hero.jpg?height=600&width=500"
+                alt="Centro de belleza"
+                fill
+                className="object-cover rounded-3xl"
+              />
             </div>
           </div>
         </div>
@@ -202,7 +216,7 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/facial.jpg?height=200&width=400"
                   alt="Tratamientos faciales"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -225,7 +239,7 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/corporal.jpg?height=200&width=400"
                   alt="Tratamientos corporales"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -248,10 +262,10 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/manicura.jpg?height=200&width=400"
                   alt="Cuidado de uñas"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-6">
@@ -270,11 +284,11 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-white/50">
+      <section className="py-20 px-4 bg-sage">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Testimonios</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-sage mb-4">Lo que dicen nuestros clientes</h2>
+            <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Testimonios</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-cream mb-4">Lo que dicen nuestros clientes</h2>
           </div>
 
           <div className="relative">
@@ -326,7 +340,7 @@ export default function LandingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-off-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">FAQ</Badge>
@@ -361,11 +375,11 @@ export default function LandingPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-white/50">
+      <section className="py-20 px-4 bg-sage">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Contacto</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-dark-sage mb-4">Visítanos o contáctanos</h2>
+            <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Contacto</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold text-cream mb-4">Visítanos o contáctanos</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -376,7 +390,12 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-dark-sage mb-4">WhatsApp</h3>
                 <p className="text-sage mb-4">Reserva tu cita por WhatsApp</p>
-                <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full">+54 11 1234-5678</Button>
+                <Button 
+                  className="bg-green-600 hover:bg-green-700 text-white rounded-full"
+                  onClick={() => window.open('https://wa.me/5491163746069', '_blank')}
+                >
+                  +54 11 6374-6069
+                </Button>
               </CardContent>
             </Card>
 
@@ -387,7 +406,12 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-dark-sage mb-4">Instagram</h3>
                 <p className="text-sage mb-4">Síguenos en redes sociales</p>
-                <Button className="bg-pink-600 hover:bg-pink-700 text-white rounded-full">@cuerpoyarmonia</Button>
+                <Button 
+                  className="bg-pink-600 hover:bg-pink-700 text-white rounded-full"
+                  onClick={() => window.open('https://instagram.com/cuerpoyarmonia', '_blank')}
+                >
+                  @cuerpoyarmonia
+                </Button>
               </CardContent>
             </Card>
 
@@ -398,13 +422,14 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-dark-sage mb-4">Dirección</h3>
                 <p className="text-sage mb-4">
-                  Av. Corrientes 1234
+                Manuela Pedraza 2457
                   <br />
-                  Buenos Aires, Argentina
+                  Nuñez, Buenos Aires, Argentina
                 </p>
                 <Button
                   variant="outline"
                   className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent"
+                  onClick={() => window.open('https://maps.app.goo.gl/hQaacYCMPmrN6aJw9', '_blank')}
                 >
                   Ver en mapa
                 </Button>
@@ -414,7 +439,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-dark-sage text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-4 gap-8">
@@ -432,7 +456,6 @@ export default function LandingPage() {
                 <li>Tratamientos Faciales</li>
                 <li>Tratamientos Corporales</li>
                 <li>Cuidado de Uñas</li>
-                <li>Masajes Relajantes</li>
               </ul>
             </div>
 
@@ -441,11 +464,11 @@ export default function LandingPage() {
               <ul className="space-y-2 text-white/80">
                 <li className="flex items-center">
                   <Phone className="h-4 w-4 mr-2" />
-                  +54 11 1234-5678
+                  +54 11 6374-6069
                 </li>
                 <li className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
-                  Av. Corrientes 1234
+                  Manuela Pedraza 2457
                 </li>
                 <li className="flex items-center">
                   <Instagram className="h-4 w-4 mr-2" />
@@ -456,7 +479,7 @@ export default function LandingPage() {
           </div>
 
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
-            <p>&copy; 2024 Cuerpo y Armonía. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Cuerpo y Armonía. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
@@ -469,20 +492,17 @@ export default function LandingPage() {
             <p className="text-sm opacity-90">Reserva tu cita ahora</p>
           </div>
           <div className="flex gap-3">
-            <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full">
+            <Button 
+              className="bg-green-600 hover:bg-green-700 text-white rounded-full"
+              onClick={() => window.open('https://wa.me/5491163746069', '_blank')}
+            >
               <MessageCircle className="mr-2 h-4 w-4" />
               WhatsApp
-            </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-sage rounded-full bg-transparent"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              Llamar
             </Button>
           </div>
         </div>
       </div>
+      <div className="h-16 w-full bg-dark-sage"></div>
     </div>
   )
 }
