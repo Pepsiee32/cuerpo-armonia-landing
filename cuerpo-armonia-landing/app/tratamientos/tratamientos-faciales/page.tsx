@@ -85,46 +85,49 @@ export default function TratamientosFaciales() {
     <div className="min-h-screen bg-off-white">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center text-sage hover:text-dark-sage transition-colors">
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Volver al inicio
+        <div className="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center text-sage hover:text-dark-sage transition-colors text-sm sm:text-base">
+            <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">Volver al inicio</span>
+            <span className="sm:hidden">Inicio</span>
           </Link>
           <div className="flex items-center space-x-2">
-            <Image src="/logo-no-letter.svg" alt="Cuerpo y Armonia" width={40} height={40} />
-            <span className="text-xl font-bold text-dark-sage">Cuerpo y Armonia</span>
+            <Image src="/logo-no-letter.svg" alt="Cuerpo y Armonia" width={32} height={32} className="sm:w-10 sm:h-10" />
+            <span className="text-lg sm:text-xl font-bold text-dark-sage hidden sm:block">Cuerpo y Armonia</span>
+            <span className="text-base font-bold text-dark-sage sm:hidden">C&A</span>
           </div>
           <Button
-            className="bg-sage hover:bg-dark-sage text-white rounded-full"
+            className="bg-sage hover:bg-dark-sage text-white rounded-full text-xs sm:text-sm px-3 sm:px-4 py-2"
             onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
           >
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Reservar
+            <MessageCircle className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Reservar</span>
+            <span className="sm:hidden">Reservar</span>
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-r from-sage/10 to-dark-sage/10">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-r from-sage/10 to-dark-sage/10">
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Tratamientos Faciales</Badge>
-          <h1 className="text-4xl md:text-6xl font-semibold text-dark-sage mb-6">Cuidado Facial Profesional</h1>
-          <p className="text-xl text-sage max-w-3xl mx-auto mb-8 font-light">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold text-dark-sage mb-4 sm:mb-6 px-2">Cuidado Facial Profesional</h1>
+          <p className="text-base sm:text-lg md:text-xl text-sage max-w-3xl mx-auto mb-6 sm:mb-8 font-light px-2 leading-relaxed">
           Descubrí nuestra amplia gama de tratamientos faciales diseñados para todo tipo de piel. Desde limpiezas profundas hasta cuidados anti-edad, combinamos técnicas efectivas y productos de calidad para lograr resultados visibles y duraderos.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-sage hover:bg-dark-sage text-white px-8 py-4 rounded-full font-medium"
+              className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
               onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
+              <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Consultar Disponibilidad
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-8 py-4 font-medium"
+              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-medium text-sm sm:text-base"
               onClick={() => {
                 const section = document.getElementById('paquetes-especiales');
                 if (section) {
@@ -139,16 +142,16 @@ export default function TratamientosFaciales() {
       </section>
 
       {/* Treatments Grid */}
-      <section id="paquetes-especiales" className="py-20 px-4">
+      <section id="paquetes-especiales" className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold text-dark-sage mb-4">Nuestros Tratamientos Faciales</h2>
-            <p className="text-lg text-sage max-w-2xl mx-auto font-light">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-dark-sage mb-4 px-2">Nuestros Tratamientos Faciales</h2>
+            <p className="text-base sm:text-lg text-sage max-w-2xl mx-auto font-light px-2">
             Cada sesión está diseñada para cuidar tu piel, mejorar su apariencia y brindarte un momento de bienestar único.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {treatments.map((treatment, index) => {
               const Icon = treatment.icon;
               return (
@@ -156,22 +159,22 @@ export default function TratamientosFaciales() {
                   key={index}
                   className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 overflow-hidden">
                     <Image
                       src={treatment.image}
                       alt={treatment.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                        <Icon className="h-6 w-6" />
+                    <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-full p-1.5 sm:p-2">
+                        <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-semibold text-dark-sage">{treatment.name}</h3>
+                      <h3 className="text-lg sm:text-xl font-semibold text-dark-sage leading-tight">{treatment.name}</h3>
                       <Badge className="bg-sage/10 text-sage border-sage/20 text-xs">
                         <Clock className="h-3 w-3 mr-1" />
                         {treatment.duration}
@@ -180,27 +183,27 @@ export default function TratamientosFaciales() {
                     <p className="text-sage mb-4 text-sm leading-relaxed font-light">{treatment.description}</p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center mb-1 mt-2">
-                        <Heart className="w-4 h-4 text-pink-500 mr-2" />
-                        <span className="font-semibold text-dark-sage text-base">Beneficios:</span>
+                        <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-pink-500 mr-2" />
+                        <span className="font-semibold text-dark-sage text-sm sm:text-base">Beneficios:</span>
                       </div>
                       {treatment.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-sage">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          {benefit}
+                        <div key={idx} className="flex items-start text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{benefit}</span>
                         </div>
                       ))}
                       {treatment.zones && (
                         <div className="mt-2">
-                          <span className="font-semibold text-sage">Zonas incluidas: </span>
-                          <span className="text-sage">{treatment.zones.join(", ")}</span>
+                          <span className="font-semibold text-sage text-xs sm:text-sm">Zonas incluidas: </span>
+                          <span className="text-sage text-xs sm:text-sm">{treatment.zones.join(", ")}</span>
                         </div>
                       )}
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold text-dark-sage">{treatment.price}</span>
+                      <span className="text-base sm:text-lg font-semibold text-dark-sage">{treatment.price}</span>
                       <Button
                         size="sm"
-                        className="bg-sage hover:bg-dark-sage text-white rounded-full font-medium"
+                        className="bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-xs sm:text-sm px-3 sm:px-4 py-2"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Quiero reservar un turno para ${treatment.name}.`);
                           window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
@@ -218,43 +221,43 @@ export default function TratamientosFaciales() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-sage">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold text-cream mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">
               ¿Por qué elegir nuestros tratamientos faciales?
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
 
           <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <ScanFace className="h-8 w-8 text-sage" />
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <ScanFace className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark-sage mb-4">Enfoque Personalizado</h3>
-                <p className="text-sage">Adaptamos cada tratamiento a tu tipo de piel y objetivos estéticos, asegurando una experiencia única.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-dark-sage mb-3 sm:mb-4">Enfoque Personalizado</h3>
+                <p className="text-sage text-sm sm:text-base">Adaptamos cada tratamiento a tu tipo de piel y objetivos estéticos, asegurando una experiencia única.</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Star className="h-8 w-8 text-sage" />
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Star className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark-sage mb-4">Profesionales Certificados</h3>
-                <p className="text-sage">Nuestro equipo tiene más de 15 años de experiencia y formación constante en estética facial.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-dark-sage mb-3 sm:mb-4">Profesionales Certificados</h3>
+                <p className="text-sage text-sm sm:text-base">Nuestro equipo tiene más de 15 años de experiencia y formación constante en estética facial.</p>
               </CardContent>
             </Card>
 
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Sparkles className="h-8 w-8 text-sage" />
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark-sage mb-4">Productos de Calidad</h3>
-                <p className="text-sage">Trabajamos con productos de alta calidad, seleccionados por su eficacia y cuidado para la piel.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-dark-sage mb-3 sm:mb-4">Resultados Visibles</h3>
+                <p className="text-sage text-sm sm:text-base">Combinamos técnicas avanzadas con productos de calidad para lograr resultados reales y duraderos.</p>
               </CardContent>
             </Card>
           </div>
@@ -262,45 +265,45 @@ export default function TratamientosFaciales() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-dark-sage mb-6">¿Lista para transformar tu piel?</h2>
-          <p className="text-lg text-sage mb-8 max-w-2xl mx-auto font-light">
-          Agendá tu consulta y encontrá el tratamiento facial ideal para vos. Nuestro equipo te asesorará de forma personalizada para lograr resultados reales y duraderos.
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cream mb-4 sm:mb-6 px-2">¿Lista para renovar tu piel?</h2>
+          <p className="text-base sm:text-lg text-cream/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
+          Reservá tu cita para un tratamiento facial personalizado. Nuestro equipo te va a asesorar para que disfrutes una experiencia única y salgas sintiéndote renovada.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-sage hover:bg-dark-sage text-white px-8 py-4 rounded-full font-medium"
-              onClick={() => window.open('https://wa.me/5491163746069?text=Hola!%20Me%20gustaría%20consultar%20por%20los%20tratamientos%20faciales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20asesorarme%20para%20encontrar%20el%20más%20adecuado%20para%20mi%20piel?', '_blank')}
+              className="bg-cream hover:bg-cream/90 text-dark-sage px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base"
+              onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20cita%20para%20un%20tratamiento%20facial.%20¿Podrían%20contarme%20la%20disponibilidad%3F', '_blank')}
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Reservar Consulta
+              <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              Reservar Cita
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-8 py-4 font-medium"
+              className="border-cream text-cream hover:bg-cream hover:text-dark-sage rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base mb-1"
               onClick={() => window.open("https://instagram.com/cuerpoyarmonia", "_blank")}
             >
-              Ver Resultados en Instagram
+              Ver Trabajos Realizados
             </Button>
           </div>
         </div>
       </section>
 
       {/* Contact Strip */}
-      <div className="fixed bottom-0 left-0 right-0 bg-sage text-white p-4 shadow-lg z-50">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="fixed bottom-0 left-0 right-0 bg-sage text-white p-3 sm:p-4 shadow-lg z-50">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="text-center sm:text-left">
-            <p className="font-semibold">¿Dudas sobre qué tratamiento elegir?</p>
-            <p className="text-sm opacity-90 font-light">Consulta gratuita por WhatsApp</p>
+            <p className="font-semibold text-sm sm:text-base">¿Dudas sobre qué tratamiento elegir?</p>
+            <p className="text-xs sm:text-sm opacity-90">Consulta gratuita por WhatsApp</p>
           </div>
           <Button
-            className="bg-green-600 hover:bg-green-700 text-white rounded-full font-medium"
-            onClick={() => window.open('https://wa.me/5491163746069?text=Hola!%20Me%20gustaría%20consultar%20por%20los%20tratamientos%20faciales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20asesorarme%20para%20encontrar%20el%20más%20adecuado%20para%20mi%20piel?', '_blank')}
+            className="bg-green-600 hover:bg-green-700 text-white rounded-full text-sm sm:text-base"
+            onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Me%20gustaría%20recibir%20asesoramiento%20sobre%20los%20tratamientos%20faciales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20ayudarme%20a%20elegir%20el%20más%20adecuado%20para%20mí%3F', '_blank')}
           >
-            <MessageCircle className="mr-2 h-4 w-4" />
+            <MessageCircle className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
             Consultar Ahora
           </Button>
         </div>

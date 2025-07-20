@@ -108,46 +108,49 @@ export default function TratamientosCorporales() {
     <div className="min-h-screen bg-off-white">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center text-sage hover:text-dark-sage transition-colors">
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            Volver al inicio
+        <div className="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center text-sage hover:text-dark-sage transition-colors text-sm sm:text-base">
+            <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
+            <span className="hidden sm:inline">Volver al inicio</span>
+            <span className="sm:hidden">Inicio</span>
           </Link>
           <div className="flex items-center space-x-2">
-            <Image src="/logo-no-letter.svg" alt="Cuerpo y Armonia" width={40} height={40} />
-            <span className="text-xl font-bold text-dark-sage">Cuerpo y Armonia</span>
+            <Image src="/logo-no-letter.svg" alt="Cuerpo y Armonia" width={32} height={32} className="sm:w-10 sm:h-10" />
+            <span className="text-lg sm:text-xl font-bold text-dark-sage hidden sm:block">Cuerpo y Armonia</span>
+            <span className="text-base font-bold text-dark-sage sm:hidden">C&A</span>
           </div>
           <Button
-            className="bg-sage hover:bg-dark-sage text-white rounded-full"
+            className="bg-sage hover:bg-dark-sage text-white rounded-full text-xs sm:text-sm px-3 sm:px-4 py-2"
             onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
           >
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Reservar
+            <MessageCircle className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Reservar</span>
+            <span className="sm:hidden">Reservar</span>
           </Button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-r from-sage/10 to-dark-sage/10">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-r from-sage/10 to-dark-sage/10">
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Tratamientos Corporales</Badge>
-          <h1 className="text-4xl md:text-6xl font-semibold text-dark-sage mb-6">Bienestar para tu Cuerpo</h1>
-          <p className="text-xl text-sage max-w-3xl mx-auto mb-8 font-light">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold text-dark-sage mb-4 sm:mb-6 px-2">Bienestar para tu Cuerpo</h1>
+          <p className="text-base sm:text-lg md:text-xl text-sage max-w-3xl mx-auto mb-6 sm:mb-8 font-light px-2 leading-relaxed">
           Descubrí nuestra línea de tratamientos corporales diseñada para ayudarte a liberar tensiones, activar tu circulación y recuperar tu energía. Desde masajes relajantes hasta cuidados reductivos, cada propuesta se adapta a tus necesidades y objetivos personales.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-sage hover:bg-dark-sage text-white px-8 py-4 rounded-full font-medium"
+              className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
               onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
+              <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Consultar Disponibilidad
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-8 py-4 font-medium"
+              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-medium text-sm sm:text-base"
               onClick={() => {
                 const section = document.getElementById('paquetes-especiales');
                 if (section) {
@@ -162,16 +165,16 @@ export default function TratamientosCorporales() {
       </section>
 
       {/* Treatments Grid */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold text-dark-sage mb-4">Nuestros Tratamientos Corporales</h2>
-            <p className="text-lg text-sage max-w-2xl mx-auto font-light">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-dark-sage mb-4 px-2">Nuestros Tratamientos Corporales</h2>
+            <p className="text-base sm:text-lg text-sage max-w-2xl mx-auto font-light px-2">
             Cada sesión combina técnicas adaptadas a tus objetivos para mejorar tu bienestar, aliviar tensiones y sentirte mejor con tu cuerpo.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {treatments.map((treatment, index) => {
               const Icon = treatment.icon;
               return (
@@ -179,22 +182,22 @@ export default function TratamientosCorporales() {
                   key={index}
                   className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 overflow-hidden">
                     <Image
                       src={treatment.image}
                       alt={treatment.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-                        <Icon className="h-6 w-6" />
+                    <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-full p-1.5 sm:p-2">
+                        <Icon className="h-4 w-4 sm:h-6 sm:w-6" />
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-semibold text-dark-sage">{treatment.name}</h3>
+                      <h3 className="text-lg sm:text-xl font-semibold text-dark-sage leading-tight">{treatment.name}</h3>
                       <Badge className="bg-sage/10 text-sage border-sage/20 text-xs">
                         <Clock className="h-3 w-3 mr-1" />
                         {treatment.duration}
@@ -203,26 +206,26 @@ export default function TratamientosCorporales() {
                     <p className="text-sage mb-4 text-sm leading-relaxed font-light">{treatment.description}</p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center mb-1 mt-2">
-                        <Heart className="w-4 h-4 text-pink-500 mr-2" />
-                        <span className="font-semibold text-dark-sage text-base">Beneficios:</span>
+                        <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-pink-500 mr-2" />
+                        <span className="font-semibold text-dark-sage text-sm sm:text-base">Beneficios:</span>
                       </div>
                       {treatment.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-sage">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          {benefit}
+                        <div key={idx} className="flex items-start text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{benefit}</span>
                         </div>
                       ))}
                       {treatment.zones && (
                         <div className="mt-2">
-                          <span className="font-semibold text-sage">Zonas: </span>
-                          <span className="text-sage">{treatment.zones.join(", ")}</span>
+                          <span className="font-semibold text-sage text-xs sm:text-sm">Zonas: </span>
+                          <span className="text-sage text-xs sm:text-sm">{treatment.zones.join(", ")}</span>
                         </div>
                       )}
                       {treatment.options && (
                         <div className="mb-2 space-y-1">
-                          <span className="font-semibold text-sage block">Precios:</span>
+                          <span className="font-semibold text-sage text-xs sm:text-sm block">Precios:</span>
                           {treatment.options.map((opt, i) => (
-                            <div key={i} className="flex justify-between text-sage text-sm">
+                            <div key={i} className="flex justify-between text-sage text-xs sm:text-sm">
                               <span>
                                 {opt.label}
                                 {"duration" in opt && opt.duration ? ` - ${opt.duration}` : ""}
@@ -234,11 +237,11 @@ export default function TratamientosCorporales() {
                       )}
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold text-dark-sage">{treatment.price}</span>
+                      <span className="text-base sm:text-lg font-semibold text-dark-sage">{treatment.price}</span>
                       {treatment.isDepilacion ? (
                         <div className="flex flex-col items-center mt-4">
                           <Button
-                            className="bg-sage hover:bg-dark-sage text-white rounded-full"
+                            className="bg-sage hover:bg-dark-sage text-white rounded-full text-xs sm:text-sm px-3 sm:px-4 py-2"
                             onClick={() => {
                               const mensaje = encodeURIComponent("¡Hola! Quiero consultar por depilación.");
                               window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
@@ -246,12 +249,12 @@ export default function TratamientosCorporales() {
                           >
                             Consultar por WhatsApp
                           </Button>
-                          <span className="text-sage text-sm mt-2">Consultá la lista de precios y días disponibles</span>
+                          <span className="text-sage text-xs sm:text-sm mt-2 text-center">Consultá la lista de precios y días disponibles</span>
                         </div>
                       ) : (
                         <Button
                           size="sm"
-                          className="bg-sage hover:bg-dark-sage text-white rounded-full font-medium"
+                          className="bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-xs sm:text-sm px-3 sm:px-4 py-2"
                           onClick={() => {
                             const mensaje = encodeURIComponent(`¡Hola! Quiero reservar un turno para ${treatment.name}.`);
                             window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
@@ -270,39 +273,39 @@ export default function TratamientosCorporales() {
       </section>
 
       {/* Special Packages */}
-      <section id="paquetes-especiales" className="py-20 px-4 bg-sage">
+      <section id="paquetes-especiales" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold text-cream mb-4">Paquetes Especiales</h2>
-            <p className="text-cream/80 max-w-2xl mx-auto font-light">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">Paquetes Especiales</h2>
+            <p className="text-cream/80 max-w-2xl mx-auto font-light px-2 text-sm sm:text-base">
             Combiná tratamientos y aprovechá nuestros paquetes diseñados para potenciar resultados y cuidar tu cuerpo con más beneficios.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Más Popular</Badge>
-                  <h3 className="text-2xl font-semibold text-dark-sage mb-2">Paquete Relajación Total</h3>
-                  <p className="text-sage mb-4">4 sesiones de masaje relajante + drenaje linfático</p>
-                  <div className="text-3xl font-bold text-dark-sage">$45.000</div>
-                  <p className="text-sm text-sage line-through">Precio individual: $54.000</p>
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-center mb-4 sm:mb-6">
+                  <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Más Popular</Badge>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Relajación Total</h3>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones de masaje relajante + drenaje linfático</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$45.000</div>
+                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $54.000</p>
                 </div>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />4 Masajes relajantes (60 min c/u)
+                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />4 Masajes relajantes (60 min c/u)
                   </div>
-                  <div className="flex items-center text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />2 Drenajes linfáticos (75 min c/u)
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Drenajes linfáticos (75 min c/u)
                   </div>
-                  <div className="flex items-center text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />
                     Consulta personalizada incluida
                   </div>
                 </div>
                 <Button
-                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium"
+                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Relajación Total" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
                     window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
@@ -314,28 +317,28 @@ export default function TratamientosCorporales() {
             </Card>
 
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-4">Resultados Visibles</Badge>
-                  <h3 className="text-2xl font-semibold text-dark-sage mb-2">Paquete Reductivo</h3>
-                  <p className="text-sage mb-4">6 sesiones combinadas para lograr un cambio visible</p>
-                  <div className="text-3xl font-bold text-dark-sage">$95.000</div>
-                  <p className="text-sm text-sage line-through">Precio individual: $108.000</p>
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-center mb-4 sm:mb-6">
+                  <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Reductivo</h3>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">6 sesiones combinadas para lograr un cambio visible</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$95.000</div>
+                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $108.000</p>
                 </div>
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />3 Tratamientos reductivos (90 min c/u)
+                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />3 Tratamientos reductivos (90 min c/u)
                   </div>
-                  <div className="flex items-center text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />3 Radiofrecuencias corporales (60 min c/u)
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />3 Radiofrecuencias corporales (60 min c/u)
                   </div>
-                  <div className="flex items-center text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />
                     Plan nutricional básico incluido
                   </div>
                 </div>
                 <Button
-                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium"
+                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Reductivo" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
                     window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
@@ -350,37 +353,37 @@ export default function TratamientosCorporales() {
       </section>
 
       {/* Beneficios Corporales */}
-      <section className="py-20 px-4 bg-gradient-to-r from-sage to-dark-sage">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-r from-sage to-dark-sage">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-semibold text-cream mb-4">¿Por qué elegir nuestros tratamientos corporales?</h2>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">¿Por qué elegir nuestros tratamientos corporales?</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="h-8 w-8 text-sage" />
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark-sage mb-4">Bienestar Real</h3>
-                <p className="text-sage">Tratamientos pensados para cuidar tu cuerpo y reconectar con tu energía.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-dark-sage mb-3 sm:mb-4">Bienestar Real</h3>
+                <p className="text-sage text-sm sm:text-base">Tratamientos pensados para cuidar tu cuerpo y reconectar con tu energía.</p>
               </CardContent>
             </Card>
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <UserCheck className="h-8 w-8 text-sage" />
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <UserCheck className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark-sage mb-4">Atención Profesional</h3>
-                <p className="text-sage">Más de 15 años de experiencia en técnicas corporales comprobadas.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-dark-sage mb-3 sm:mb-4">Atención Profesional</h3>
+                <p className="text-sage text-sm sm:text-base">Más de 15 años de experiencia en técnicas corporales comprobadas.</p>
               </CardContent>
             </Card>
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Hand className="h-8 w-8 text-sage" />
+              <CardContent className="p-6 sm:p-8 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Hand className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark-sage mb-4">Cuidado Personalizado</h3>
-                <p className="text-sage">Cada sesión se adapta a tus objetivos físicos y emocionales.</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-dark-sage mb-3 sm:mb-4">Cuidado Personalizado</h3>
+                <p className="text-sage text-sm sm:text-base">Cada sesión se adapta a tus objetivos físicos y emocionales.</p>
               </CardContent>
             </Card>
           </div>
@@ -388,25 +391,25 @@ export default function TratamientosCorporales() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-dark-sage mb-6">¿Listo para cuidar tu cuerpo?</h2>
-          <p className="text-lg text-sage mb-8 max-w-2xl mx-auto font-light">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-dark-sage mb-4 sm:mb-6 px-2">¿Listo para cuidar tu cuerpo?</h2>
+          <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 max-w-2xl mx-auto font-light px-2">
           Te esperamos con un espacio dedicado a tu bienestar corporal, donde cada sesión está pensada para ayudarte a sentirte bien, por dentro y por fuera.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-sage hover:bg-dark-sage text-white px-8 py-4 rounded-full font-medium"
+              className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
               onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20sesión%20corporal%20en%20Cuerpo%20y%20Armonia.%20¿Podrían%20confirmarme%20la%20disponibilidad?', '_blank')}
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
+              <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Reservar Sesión
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-8 py-4 font-medium"
+              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-medium text-sm sm:text-base mb-1"
               onClick={() => window.open("https://instagram.com/cuerpoyarmonia", "_blank")}
             >
               Ver Testimonios
@@ -416,17 +419,17 @@ export default function TratamientosCorporales() {
       </section>
 
       {/* Contact Strip */}
-      <div className="fixed bottom-0 left-0 right-0 bg-sage text-white p-4 shadow-lg z-50">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="fixed bottom-0 left-0 right-0 bg-sage text-white p-3 sm:p-4 shadow-lg z-50">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="text-center sm:text-left">
-            <p className="font-semibold">¿Dudas sobre qué tratamiento elegir?</p>
-            <p className="text-sm opacity-90 font-light">Consulta gratuita por WhatsApp</p>
+            <p className="font-semibold text-sm sm:text-base">¿Dudas sobre qué tratamiento elegir?</p>
+            <p className="text-xs sm:text-sm opacity-90 font-light">Consulta gratuita por WhatsApp</p>
           </div>
           <Button
-            className="bg-green-600 hover:bg-green-700 text-white rounded-full font-medium"
+            className="bg-green-600 hover:bg-green-700 text-white rounded-full font-medium text-sm sm:text-base"
             onClick={() => window.open('https://wa.me/5491163746069?text=Hola!%20Me%20gustaría%20consultar%20por%20los%20tratamientos%20corporales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20asesorarme%20para%20elegir%20el%20más%20adecuado%20para%20mí?', '_blank')}
           >
-            <MessageCircle className="mr-2 h-4 w-4" />
+            <MessageCircle className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
             Consultar Ahora
           </Button>
         </div>
