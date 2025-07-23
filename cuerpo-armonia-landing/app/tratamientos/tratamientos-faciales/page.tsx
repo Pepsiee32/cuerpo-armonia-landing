@@ -11,7 +11,7 @@ export default function TratamientosFaciales() {
     const treatments = [
         {
         name: "Limpieza Facial Profunda",
-        description: "Eliminación de impurezas con punta de diamante, extracciones y una hidratación descongestiva.",
+        description: "Eliminación de celulas muertas con punta de diamante, extracciones de puntos negros, máscara descongestiva y máscara hidratante.",
         price: "$29.000",
         duration: "90 min",
         benefits: [
@@ -27,7 +27,7 @@ export default function TratamientosFaciales() {
           name: "Dermaplaning + Limpieza",
           description: "Eliminación de células muertas y vello facial con bisturí dermatológico, combinada con limpieza profunda.",
           price: "$35.000",
-          duration: "",
+          duration: "60 min",
           benefits: [
             "Piel ultra suave y uniforme",
             "Mayor luminosidad inmediata",
@@ -35,22 +35,8 @@ export default function TratamientosFaciales() {
             "Acabado sin vello facial"
           ],
           icon: Layers,
-          image: "/dermaplan2.jpg?height=300&width=400",
+          image: "/dermaplan+limp.jpg?height=300&width=400",
         },             
-        {
-          name: "Crioradiofrecuencia Facial",
-          description: "Tratamiento facial con tecnología avanzada para rejuvenecer y reafirmar la piel.",
-          price: "$14.000",
-          benefits: [
-            "Reafirma la piel",
-            "Reduce arrugas",
-            "Mejora textura",
-            "Estimula colágeno"
-          ],
-          icon: Sparkles,
-          image: "/crio-facial.png?height=300&width=400",
-          zones: ["Rostro", "Cuello", "Escote"]
-        },
         {
           name: "Microneedling Personalizado",
           description: "Aplicación de activos como hialurónico, resveratrol, exosomas, hilos tensores o botox mediante micropunción.",
@@ -67,17 +53,31 @@ export default function TratamientosFaciales() {
         }, 
         {
           name: "Peeling Químico (Green o Gold Peel)",
-          description: "Exfoliación profunda con peelings químicos adaptados al tipo de piel: renovación con activos naturales.",
+          description: "Descamación celular profunda con principios activos específicos para tu tipo de piel. Ideal para manchas, textura y firmeza.",
           price: "$40.000",
-          duration: "",
+          duration: "50 min",
           benefits: [
-            "Renovación celular intensa",
-            "Piel más suave y luminosa",
-            "Unificación del tono y textura",
+            "Despigmenta manchas y marcas",
+            "Renovación celular profunda",
+            "Tensión",
             "Activos adaptados: Green o Gold Peel"
           ],
           icon: Flame,
           image: "/gold2.webp?height=300&width=400",
+        },        
+        {
+          name: "Crioradiofrecuencia Facial",
+          description: "Tratamiento facial con tecnología avanzada para rejuvenecer y reafirmar la piel.",
+          price: "$14.000",
+          benefits: [
+            "Reafirma la piel",
+            "Reduce arrugas",
+            "Mejora textura",
+            "Estimula colágeno"
+          ],
+          icon: Sparkles,
+          image: "/crio-facial.png?height=300&width=400",
+          zones: ["Rostro", "Cuello", "Escote"]
         }
       ]
 
@@ -129,13 +129,13 @@ export default function TratamientosFaciales() {
               variant="outline"
               className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-medium text-sm sm:text-base"
               onClick={() => {
-                const section = document.getElementById('paquetes-especiales');
+                const section = document.getElementById('paquetes-especiales-faciales');
                 if (section) {
                   section.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
             >
-              Ver Promociones
+              Ver Paquetes Especiales
             </Button>
           </div>
         </div>
@@ -220,8 +220,89 @@ export default function TratamientosFaciales() {
         </div>
       </section>
 
+      {/* Paquetes Especiales Faciales */}
+      <section id="paquetes-especiales-faciales" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">Paquetes Especiales Faciales</h2>
+            <p className="text-cream/80 max-w-2xl mx-auto font-light px-2 text-sm sm:text-base">
+              Combiná tratamientos y aprovechá nuestros paquetes diseñados para potenciar los resultados y cuidar tu piel con más beneficios.
+            </p>
+            <p className="text-cream/80 text-xs sm:text-sm mt-2 italic">
+              Tenés hasta 45 días desde la compra para usar todas tus sesiones 📅
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-center mb-4 sm:mb-6">
+                  <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Limpieza Profunda</Badge>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Glow Facial</h3>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">3 sesiones de limpieza facial profunda + hidratación intensiva</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$38.000</div>
+                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $45.000</p>
+                </div>
+                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />3 Limpiezas profundas (60 min c/u)
+                  </div>
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />3 Hidrataciones intensivas
+                  </div>
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />Asesoramiento personalizado
+                  </div>
+                </div>
+                <Button
+                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
+                  onClick={() => {
+                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Glow Facial\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                  }}
+                >
+                  Consultar Paquete
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
+              <CardContent className="p-6 sm:p-8">
+                <div className="text-center mb-4 sm:mb-6">
+                  <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Antiage</Badge>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Rejuvenecimiento</h3>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones combinadas para renovar y tensar la piel</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$55.000</div>
+                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $64.000</p>
+                </div>
+                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Radiofrecuencias faciales (45 min c/u)
+                  </div>
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Limpiezas profundas (60 min c/u)
+                  </div>
+                  <div className="flex items-center text-xs sm:text-sm text-sage">
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />Mascarilla antiage incluida
+                  </div>
+                </div>
+                <Button
+                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
+                  onClick={() => {
+                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Rejuvenecimiento\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                  }}
+                >
+                  Consultar Paquete
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-r from-sage to-dark-sage">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">
@@ -265,16 +346,16 @@ export default function TratamientosFaciales() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cream mb-4 sm:mb-6 px-2">¿Lista para renovar tu piel?</h2>
-          <p className="text-base sm:text-lg text-cream/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-sage mb-4 sm:mb-6 px-2">¿Lista para renovar tu piel?</h2>
+          <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
           Reservá tu cita para un tratamiento facial personalizado. Nuestro equipo te va a asesorar para que disfrutes una experiencia única y salgas sintiéndote renovada.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-cream hover:bg-cream/90 text-dark-sage px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base"
+              className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
               onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20cita%20para%20un%20tratamiento%20facial.%20¿Podrían%20contarme%20la%20disponibilidad%3F', '_blank')}
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -283,7 +364,7 @@ export default function TratamientosFaciales() {
             <Button
               size="lg"
               variant="outline"
-              className="border-cream text-cream hover:bg-cream hover:text-dark-sage rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base mb-1"
+              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-medium text-sm sm:text-base mb-1"
               onClick={() => window.open("https://instagram.com/cuerpoyarmonia", "_blank")}
             >
               Ver Trabajos Realizados

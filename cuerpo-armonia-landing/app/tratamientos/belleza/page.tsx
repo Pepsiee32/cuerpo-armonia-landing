@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Palette, Clock, Star, MessageCircle, CheckCircle, Sparkles, Heart, Crown, Eye, Scissors } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 export default function CuidadoUnas() {
   const treatments = [
@@ -26,7 +26,7 @@ export default function CuidadoUnas() {
       duration: "60 min",
       benefits: ["Duración 2-3 semanas", "Brillo intenso", "No se descascara", "Secado inmediato"],
       icon: Palette,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/manicura.jpg?height=300&width=400",
     },
     {
       name: "Capping",
@@ -35,7 +35,7 @@ export default function CuidadoUnas() {
       duration: "90 min",
       benefits: ["Refuerza la uña natural", "Evita quiebres", "Duración prolongada", "Acabado prolijo"],
       icon: Star,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/capping2.webp?height=300&width=400",
     },
     {
       name: "Soft Gel",
@@ -44,7 +44,7 @@ export default function CuidadoUnas() {
       duration: "90 min",
       benefits: ["Uñas más largas", "Mayor resistencia", "Aspecto natural", "Flexibilidad"],
       icon: Star,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/softgel.webp?height=300&width=400",
     },
     {
       name: "Belleza de Pies + Tradicional",
@@ -53,7 +53,7 @@ export default function CuidadoUnas() {
       duration: "60 min",
       benefits: ["Pies suaves", "Uñas perfectas", "Relajación", "Cuidado completo"],
       icon: Sparkles,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/pies2.jpg?height=300&width=400",
     },
     {
       name: "Belleza de Pies + Semipermanente",
@@ -62,7 +62,7 @@ export default function CuidadoUnas() {
       duration: "75 min",
       benefits: ["Larga duración", "Pies impecables", "Resistente al agua", "Brillo duradero"],
       icon: Sparkles,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/pies1.jpg?height=300&width=400",
     },
     {
       name: "Perfilado de Cejas",
@@ -121,9 +121,15 @@ export default function CuidadoUnas() {
   ]
 
   const nailArtImages = [
+    "/nailart.webp",
+    "/nailart7.jpeg",
+    "/nailart3.webp",
     "/nailart1.webp",
     "/nailart2.webp",
-    "/nailart3.webp",
+    "/nailart4.webp",
+    "/nailart5.webp",
+    "/nailart6.jpeg",
+    "/nailart8.jpeg",
     // ...agrega todas las que quieras
   ];
 
@@ -203,12 +209,12 @@ export default function CuidadoUnas() {
                 key={index}
                 className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group"
               >
-                <div className="relative h-40 sm:h-48 overflow-hidden">
+                <div className="relative h-56 sm:h-64 overflow-hidden">
                   <Image
                     src={treatment.image}
                     alt={treatment.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className={`object-cover group-hover:scale-105 transition-transform duration-300 ${treatment.name === "Soft Gel" ? "object-bottom" : "object-center"}`}
                   />
                   <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
                     <div className="bg-white/90 backdrop-blur-sm rounded-full p-1.5 sm:p-2">{(() => { const Icon = treatment.icon; return <Icon className="h-4 w-4 sm:h-6 sm:w-6" /> })()}</div>
@@ -293,6 +299,7 @@ export default function CuidadoUnas() {
                 <CardContent className="h-full w-full p-0 flex">
                   <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-3xl overflow-hidden flex-1">
                     <Carousel>
+                      <CarouselPrevious className="left-2 z-10" />
                       <CarouselContent>
                         {nailArtImages.map((src, idx) => (
                           <CarouselItem key={idx}>
@@ -302,6 +309,7 @@ export default function CuidadoUnas() {
                           </CarouselItem>
                         ))}
                       </CarouselContent>
+                      <CarouselNext className="right-2 z-10" />
                     </Carousel>
                   </div>
                 </CardContent>

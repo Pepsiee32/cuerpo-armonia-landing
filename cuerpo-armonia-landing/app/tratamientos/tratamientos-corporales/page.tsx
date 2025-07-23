@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Heart, Clock, Star, MessageCircle, CheckCircle, Zap, Waves, Target, Activity, Sparkles, Hand, UserCheck, Droplets, Snowflake, Scissors,Sun } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 export default function TratamientosCorporales() {
   const treatments = [
@@ -16,7 +17,9 @@ export default function TratamientosCorporales() {
       duration: "60 min",
       benefits: ["Alivia tensiones", "Mejora circulación", "Relajación profunda", "Bienestar general"],
       icon: Hand,
-      image: "/masajedescon.jpg?height=300&width=400",
+      image: "/ventosas1.jpg?height=300&width=400"
+      ,
+      tipoTecnicas: ["Piedras Calientes", "Ventosas"]
     },
     {
       name: "Drenaje Linfático Manual",
@@ -30,7 +33,7 @@ export default function TratamientosCorporales() {
     {
       name: "Presoterapia + Ondas Rusas",
       description: "Combinación de presoterapia para eliminar líquidos y ondas rusas para tonificar y estimular los músculos.",
-      price: "$",
+      price: "$21.000?",
       duration: "60 min",
       benefits: [
         "Mejora circulación y oxigenación",
@@ -56,18 +59,18 @@ export default function TratamientosCorporales() {
       icon: Snowflake,
       image: "/crio1.jpg?height=300&width=400",
       options: [
-        { label: "1 zona", price: "$19.000", duration: " ?min" },
-        { label: "2 zonas", price: "$20.000", duration: " ?min" },
-        { label: "3 zonas", price: "$22.000", duration: " ?min" }
+        { label: "1 zona", price: "$27.000", duration: " ?min" },
+        { label: "2 zonas", price: "$31.000", duration: " ?min" },
+        { label: "3 zonas", price: "$34.000", duration: " ?min" }
       ],
       zones: ["Abdomen", "Piernas", "Glúteos", "Flancos", "Brazos"]
     },    
     {
       name: "Himfu Corporal",
       description: "Tratamiento focalizado con tecnología HIFU. El precio varía según la cantidad de zonas tratadas.",
-      priceBase: "$12.000",
-      priceSecondZone: "$14.000",
-      priceThirdZone: "$16.000",
+      priceBase: "$13.000",
+      priceSecondZone: "$17.000",
+      priceThirdZone: "$21.000",
       benefits: [
         "Reducción localizada",
         "Tensa la piel",
@@ -77,9 +80,9 @@ export default function TratamientosCorporales() {
       icon: Target,
       image: "/crio1.jpg?height=300&width=400",
       options: [
-        { label: "1 zona", price: "$12.000", duration: "? min" },
-        { label: "2 zonas", price: "$14.000", duration: "? min" },
-        { label: "3 zonas", price: "$16.000", duration: "? min" }
+        { label: "1 zona", price: "$13.000", duration: "? min" },
+        { label: "2 zonas", price: "$17.000", duration: "? min" },
+        { label: "3 zonas", price: "$21.000", duration: "? min" }
       ],
       zones: ["Abdomen", "Flancos", "Glúteos", "Piernas", "Brazos"]
     },
@@ -184,7 +187,7 @@ export default function TratamientosCorporales() {
                 >
                   <div className="relative h-40 sm:h-48 overflow-hidden">
                     <Image
-                      src={treatment.image}
+                      src={treatment.image || "/masajedescon.jpg"}
                       alt={treatment.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -215,7 +218,13 @@ export default function TratamientosCorporales() {
                           <span className="leading-relaxed">{benefit}</span>
                         </div>
                       ))}
-                      {treatment.zones && (
+                      {treatment.tipoTecnicas && (
+                        <div className="mt-2">
+                          <span className="font-semibold text-sage text-xs sm:text-sm">Técnicas: </span>
+                          <span className="text-sage text-xs sm:text-sm">{treatment.tipoTecnicas.join(", ")}</span>
+                        </div>
+                      )}
+                      {!treatment.tipoTecnicas && Array.isArray(treatment.zones) && treatment.zones.length > 0 && (
                         <div className="mt-2">
                           <span className="font-semibold text-sage text-xs sm:text-sm">Zonas: </span>
                           <span className="text-sage text-xs sm:text-sm">{treatment.zones.join(", ")}</span>
@@ -276,9 +285,12 @@ export default function TratamientosCorporales() {
       <section id="paquetes-especiales" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">Paquetes Especiales</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">Paquetes Especiales Corporales</h2>
             <p className="text-cream/80 max-w-2xl mx-auto font-light px-2 text-sm sm:text-base">
             Combiná tratamientos y aprovechá nuestros paquetes diseñados para potenciar resultados y cuidar tu cuerpo con más beneficios.
+            </p>
+            <p className="text-cream/80 text-xs sm:text-sm mt-2 italic">
+              Tenés hasta 45 días desde la compra para usar todas tus sesiones 📅
             </p>
           </div>
 
@@ -287,27 +299,26 @@ export default function TratamientosCorporales() {
               <CardContent className="p-6 sm:p-8">
                 <div className="text-center mb-4 sm:mb-6">
                   <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Más Popular</Badge>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Relajación Total</h3>
-                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones de masaje relajante + drenaje linfático</p>
-                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$45.000</div>
-                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $54.000</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Equilibrio y Bienestar</h3>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones que armonizan cuerpo, mente y energía</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$75.000</div>
+                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $84.000</p>
                 </div>
                 <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />4 Masajes relajantes (60 min c/u)
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Masajes Descontracturantes (60 min c/u)
                   </div>
                   <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Drenajes linfáticos (75 min c/u)
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Armonización + Reiki (60 min)
                   </div>
                   <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />
-                    Consulta personalizada incluida
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />1 Drenaje Linfático Manual (45 min)
                   </div>
                 </div>
                 <Button
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
-                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Relajación Total" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Equilibrio y Bienestar" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
                     window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
                   }}
                 >
@@ -320,27 +331,26 @@ export default function TratamientosCorporales() {
               <CardContent className="p-6 sm:p-8">
                 <div className="text-center mb-4 sm:mb-6">
                   <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Reductivo</h3>
-                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">6 sesiones combinadas para lograr un cambio visible</p>
-                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$95.000</div>
-                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $108.000</p>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Detox Circulatorio Integral</h3>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para activar circulación, eliminar líquidos y relajar el cuerpo</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$75.000</div>
+                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $84.000</p>
                 </div>
                 <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                   <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />3 Tratamientos reductivos (90 min c/u)
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Presoterapia + Ondas Rusas (60 min c/u)
                   </div>
                   <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />3 Radiofrecuencias corporales (60 min c/u)
+                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Drenaje Linfático Manual (45 min)
                   </div>
                   <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />
-                    Plan nutricional básico incluido
+                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />1 Masaje Descontracturante (60 min)
                   </div>
                 </div>
                 <Button
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
-                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Reductivo" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Detox Circulatorio Integral" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
                     window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
                   }}
                 >
