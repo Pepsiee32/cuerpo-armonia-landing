@@ -17,7 +17,7 @@ export default function CuidadoUnas() {
       duration: "45 min",
       benefits: ["Uñas perfectas", "Variedad de colores", "Cuidado completo", "Acabado profesional"],
       icon: Palette,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/tradicional3.jpg?height=300&width=400",
     },
     {
       name: "Esmaltado Semipermanente de Manos",
@@ -320,17 +320,17 @@ export default function CuidadoUnas() {
       </section>
 
       {/* Care Tips Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-r from-sage to-dark-sage">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-sage mb-4 px-2">Consejos para el Cuidado</h2>
-            <p className="text-base sm:text-lg text-sage max-w-2xl mx-auto px-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cream mb-4 px-2">Consejos para el Cuidado</h2>
+            <p className="text-base sm:text-lg text-cream max-w-2xl mx-auto px-2">
               Mantén tus uñas perfectas por más tiempo con estos consejos profesionales
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <Card className="bg-white border-0 shadow-lg rounded-3xl">
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
               <CardContent className="p-6 sm:p-8 text-center">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                   <Sparkles className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
@@ -342,7 +342,7 @@ export default function CuidadoUnas() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-0 shadow-lg rounded-3xl">
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
               <CardContent className="p-6 sm:p-8 text-center">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                   <Star className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
@@ -354,7 +354,7 @@ export default function CuidadoUnas() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border-0 shadow-lg rounded-3xl">
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
               <CardContent className="p-6 sm:p-8 text-center">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
                   <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
@@ -370,16 +370,16 @@ export default function CuidadoUnas() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-cream mb-4 sm:mb-6 px-2">¿Lista para resaltar tu belleza?</h2>
-          <p className="text-base sm:text-lg text-cream/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-sage mb-4 sm:mb-6 px-2">¿Lista para resaltar tu belleza?</h2>
+          <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
           Reservá tu cita para manos, cejas o pestañas. Nuestro equipo te va a asesorar para que disfrutes una experiencia personalizada y salgas sintiéndote única.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-cream hover:bg-cream/90 text-dark-sage px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base"
+              className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
               onClick={() => window.open('https://wa.me/5491166108438?text=¡Hola!%20Quisiera%20reservar%20una%20cita%20para%20un%20servicio%20de%20belleza%20(uñas%2C%20cejas%20o%20pestañas).%20¿Podrían%20contarme%20la%20disponibilidad%3F', '_blank')}
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -388,7 +388,7 @@ export default function CuidadoUnas() {
             <Button
               size="lg"
               variant="outline"
-              className="border-cream text-cream hover:bg-cream hover:text-dark-sage rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base mb-1"
+              className="border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent px-6 sm:px-8 py-3 sm:py-4 font-medium text-sm sm:text-base mb-1"
               onClick={() => window.open("https://instagram.com/safragus", "_blank")}
             >
               Ver Trabajos Realizados

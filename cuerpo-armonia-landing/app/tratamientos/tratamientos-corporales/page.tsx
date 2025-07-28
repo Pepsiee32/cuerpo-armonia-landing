@@ -300,7 +300,10 @@ export default function TratamientosCorporales() {
                 <div className="text-center mb-4 sm:mb-6">
                   <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Más Popular</Badge>
                   <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Equilibrio y Bienestar</h3>
-                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones que armonizan cuerpo, mente y energía</p>
+                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones que armonizan cuerpo, mente y energía
+                    <br></br>
+                    <br></br>
+                  </p>
                   <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$75.000</div>
                   <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $84.000</p>
                 </div>
@@ -404,7 +407,7 @@ export default function TratamientosCorporales() {
       <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-dark-sage mb-4 sm:mb-6 px-2">¿Listo para cuidar tu cuerpo?</h2>
-          <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 max-w-2xl mx-auto font-light px-2">
+          <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
           Te esperamos con un espacio dedicado a tu bienestar corporal, donde cada sesión está pensada para ayudarte a sentirte bien, por dentro y por fuera.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
