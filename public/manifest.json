@@ -1,0 +1,21 @@
+{
+  "name": "Cuerpo y Armonía - Centro de Estética Integral",
+  "short_name": "Cuerpo y Armonía",
+  "description": "Centro de estética con más de 15 años de experiencia. Tratamientos faciales, corporales y de uñas en Núñez, Buenos Aires.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8fbc8f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-web.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "beauty", "lifestyle"],
+  "lang": "es-AR",
+  "dir": "ltr"
+} 
