@@ -94,6 +94,7 @@ export default function LandingPage() {
     }    
   ]
 
+  
   const faqs = [
     {
       question: "¿Necesito reservar un turno previamente?",
