@@ -94,7 +94,6 @@ export default function LandingPage() {
     }    
   ]
 
-  
   const faqs = [
     {
       question: "¿Necesito reservar un turno previamente?",
@@ -148,12 +147,15 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-                      <Image
-              src="/principal.webp?height=800&width=1200"
-              alt="Spa relajante"
-              fill
-              className="object-cover object-[center_57%]"
-            />
+          <Image
+            src="/optimized/principal-optimized.webp"
+            alt="Spa relajante"
+            fill
+            sizes="100vw"
+            priority
+            quality={85}
+            className="object-cover object-[center_57%]"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-sage/20 to-dark-sage/20" />
         </div>
 
@@ -260,9 +262,11 @@ export default function LandingPage() {
             </div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-64 sm:h-80 md:h-96 z-0">
               <Image
-                src="/hero.webp?height=600&width=500"
+                src="/optimized/hero-optimized.webp"
                 alt="Centro de belleza"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
                 className="object-cover rounded-3xl"
               />
             </div>
@@ -285,9 +289,11 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-40 sm:h-48 overflow-hidden">
                 <Image
-                  src="/facial.webp?height=200&width=400"
+                  src="/optimized/facial-optimized.webp"
                   alt="Tratamientos faciales"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -308,9 +314,11 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-40 sm:h-48 overflow-hidden">
                 <Image
-                  src="/corporal.jpg?height=200&width=400"
+                  src="/optimized/corporal-optimized.webp"
                   alt="Tratamientos corporales"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -331,10 +339,12 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-40 sm:h-48 overflow-hidden">
                 <Image
-                  src="/manicura.jpg?height=200&width=400"
+                  src="/optimized/manicura-optimized.webp"
                   alt="Belleza de Manos, Cejas y Pestañas"
                   fill
-                  className="object-cover object-[center_60%] group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
+                  className="object-cover object-[center_60%] group-hover:cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-4 sm:p-6">
