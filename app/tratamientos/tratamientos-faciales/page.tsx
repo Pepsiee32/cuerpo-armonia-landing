@@ -210,7 +210,11 @@ export default function TratamientosFaciales() {
                         className="bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base px-6 sm:px-8 py-3 min-h-[44px]"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Quiero reservar un turno para ${treatment.name}.`);
-                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                          // Número específico para Crioradiofrecuencia Facial
+                          const whatsappNumber = treatment.name === "Crioradiofrecuencia Facial" 
+                            ? "5491140873791" // Reemplazar con el número específico que desees
+                            : "5491163746069";
+                          window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
                         }}
                         aria-label={`Reservar turno para ${treatment.name}`}
                       >

@@ -257,7 +257,9 @@ export default function TratamientosCorporales() {
                             className="bg-sage hover:bg-dark-sage text-white rounded-full text-xs sm:text-sm px-3 sm:px-4 py-2"
                             onClick={() => {
                               const mensaje = encodeURIComponent("¡Hola! Quiero consultar por depilación.");
-                              window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                              // Número específico para depilación
+                              const whatsappNumber = "5491140873791";
+                              window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
                             }}
                             aria-label="Consultar por depilación por WhatsApp"
                           >
@@ -270,7 +272,11 @@ export default function TratamientosCorporales() {
                           className="bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base px-6 sm:px-8 py-3 min-h-[44px]"
                           onClick={() => {
                             const mensaje = encodeURIComponent(`¡Hola! Quiero reservar un turno para ${treatment.name}.`);
-                            window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                            // Número específico para tratamientos especiales
+                            const whatsappNumber = ["Crioradiofrecuencia Corporal + Facial", "Himfu Corporal"].includes(treatment.name)
+                              ? "5491140873791" // Número específico para estos tratamientos
+                              : "5491163746069";
+                            window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
                           }}
                           aria-label={`Reservar turno para ${treatment.name}`}
                         >
