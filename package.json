@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "npm run optimize-images && next build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
     "optimize-images": "node scripts/optimize-images.js",
-    "check-images": "node scripts/check-image-performance.js"
+    "check-images": "node scripts/check-image-performance.js",
+    "cleanup-images": "node scripts/cleanup-unused-images.js",
+    "cleanup-images-stats": "node scripts/cleanup-unused-images.js --stats",
+    "prebuild": "npm run optimize-images"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

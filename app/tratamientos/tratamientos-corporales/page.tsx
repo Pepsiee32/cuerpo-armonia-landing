@@ -17,8 +17,7 @@ export default function TratamientosCorporales() {
       duration: "60 min",
       benefits: ["Alivia tensiones", "Mejora circulación", "Relajación profunda", "Bienestar general"],
       icon: Hand,
-      image: "/ventosas1.jpg?height=300&width=400"
-      ,
+      image: "/optimized/ventosas1-optimized.webp",
       tipoTecnicas: ["Piedras Calientes", "Ventosas"]
     },
     {
@@ -28,7 +27,7 @@ export default function TratamientosCorporales() {
       duration: "45 min",
       benefits: ["Reduce inflamación","Mejora la circulación", "Desintoxica el cuerpo", "Ideal post operatorios o retención de líquidos"],
       icon: Droplets,
-      image: "/drenaje.jpg?height=300&width=400",
+      image: "/optimized/drenaje-optimized.webp",
     },
     {
       name: "Presoterapia + Ondas Rusas",
@@ -42,7 +41,7 @@ export default function TratamientosCorporales() {
         "Ideal para piernas cansadas"
       ],
       icon: Zap,
-      image: "/preso-onda.jpg?height=300&width=400",
+      image: "/optimized/preso-onda-optimized.webp",
     },
     {
       name: "Crioradiofrecuencia Corporal + Facial",
@@ -57,7 +56,7 @@ export default function TratamientosCorporales() {
         "Mejora la textura y firmeza de la piel"
       ],
       icon: Snowflake,
-      image: "/crio1.jpg?height=300&width=400",
+      image: "/optimized/crio1-optimized.webp",
       options: [
         { label: "1 zona", price: "$27.000", duration: " ?min" },
         { label: "2 zonas", price: "$31.000", duration: " ?min" },
@@ -78,7 +77,7 @@ export default function TratamientosCorporales() {
         "Resultados progresivos"
       ],
       icon: Target,
-      image: "/crio1.jpg?height=300&width=400",
+      image: "/optimized/crio1-optimized.webp",
       options: [
         { label: "1 zona", price: "$13.000", duration: "? min" },
         { label: "2 zonas", price: "$17.000", duration: "? min" },
@@ -93,7 +92,7 @@ export default function TratamientosCorporales() {
       duration: "-",
       benefits: ["Higiene y seguridad", "Diferentes zonas", "Atención profesional"],
       icon: Scissors, // O el ícono que prefieras
-      image: "/depi.jpg?height=300&width=400", // O una imagen alusiva si tenés
+      image: "/optimized/depi-optimized.webp", // O una imagen alusiva si tenés
       isDepilacion: true // (opcional, para personalizar el renderizado si querés)
     },
     {
@@ -103,7 +102,7 @@ export default function TratamientosCorporales() {
       duration: "60 min",
       benefits: ["Relajación profunda", "Equilibrio emocional", "Reducción del estrés", "Renovación energética"],
       icon: Sun,
-      image: "/rei.jpg?height=300&width=400",
+      image: "/optimized/rei-optimized.webp",
     },
   ]
 
@@ -193,6 +192,8 @@ export default function TratamientosCorporales() {
                       src={treatment.image || "/masajedescon.jpg"}
                       alt={treatment.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={85}
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-3 sm:top-4 left-3 sm:left-4">

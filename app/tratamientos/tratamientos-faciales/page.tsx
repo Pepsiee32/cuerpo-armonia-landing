@@ -21,7 +21,7 @@ export default function TratamientosFaciales() {
           "Hidratación calmante post-extracción"
         ],
         icon: ScanFace,
-        image: "/limpieza.jpg?height=300&width=400",
+        image: "/optimized/limpieza-optimized.webp",
         },
         {
           name: "Dermaplaning + Limpieza",
@@ -35,7 +35,7 @@ export default function TratamientosFaciales() {
             "Acabado sin vello facial"
           ],
           icon: Layers,
-          image: "/dermaplan+limp.jpg?height=300&width=400",
+          image: "/optimized/dermaplan-limp-optimized.webp",
         },             
         {
           name: "Microneedling Personalizado",
@@ -49,7 +49,7 @@ export default function TratamientosFaciales() {
             "Potencia absorción de principios activos"
           ],
           icon: Droplets,
-          image: "/need2.jpg?height=300&width=400",
+          image: "/optimized/need2-optimized.webp",
         }, 
         {
           name: "Peeling Químico (Green o Gold Peel)",
@@ -63,7 +63,7 @@ export default function TratamientosFaciales() {
             "Activos adaptados: Green o Gold Peel"
           ],
           icon: Flame,
-          image: "/gold2.webp?height=300&width=400",
+          image: "/optimized/gold2-optimized.webp",
         },        
         {
           name: "Crioradiofrecuencia Facial",
@@ -76,7 +76,7 @@ export default function TratamientosFaciales() {
             "Estimula la producción de colágeno y elastina"
           ],
           icon: Sparkles,
-          image: "/crio-facial.png?height=300&width=400",
+          image: "/optimized/crio-facial-optimized.webp",
           zones: ["Rostro", "Cuello", "Escote"]
         }
       ]
@@ -167,6 +167,8 @@ export default function TratamientosFaciales() {
                       src={treatment.image}
                       alt={treatment.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={85}
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-3 sm:top-4 left-3 sm:left-4">

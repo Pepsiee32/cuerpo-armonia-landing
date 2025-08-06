@@ -12,6 +12,7 @@ if (!fs.existsSync(optimizedDir)) {
 
 // Lista de imágenes a optimizar con configuraciones específicas
 const imagesToOptimize = [
+  // Imágenes principales (ya optimizadas)
   { 
     input: 'principal.webp', 
     output: 'principal-optimized.webp',
@@ -35,6 +36,144 @@ const imagesToOptimize = [
   { 
     input: 'manicura.jpg', 
     output: 'manicura-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  
+  // Imágenes de Belleza (Manos, Cejas, Pestañas)
+  { 
+    input: 'tradicional3.jpg', 
+    output: 'tradicional3-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'capping2.webp', 
+    output: 'capping2-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'softgel.webp', 
+    output: 'softgel-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'pies2.jpg', 
+    output: 'pies2-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'pies1.jpg', 
+    output: 'pies1-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'ceja-pesta.jpg', 
+    output: 'ceja-pesta-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  
+  // Imágenes de Nail Art
+  { 
+    input: 'nailart.webp', 
+    output: 'nailart-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'nailart1.webp', 
+    output: 'nailart1-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'nailart2.webp', 
+    output: 'nailart2-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'nailart3.webp', 
+    output: 'nailart3-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'nailart4.webp', 
+    output: 'nailart4-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'nailart5.webp', 
+    output: 'nailart5-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'nailart6.jpeg', 
+    output: 'nailart6-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'nailart7.jpeg', 
+    output: 'nailart7-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'nailart8.jpeg', 
+    output: 'nailart8-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  
+  // Imágenes de Tratamientos Corporales
+  { 
+    input: 'ventosas1.jpg', 
+    output: 'ventosas1-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'drenaje.jpg', 
+    output: 'drenaje-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'preso-onda.jpg', 
+    output: 'preso-onda-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'crio1.jpg', 
+    output: 'crio1-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'depi.jpg', 
+    output: 'depi-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'rei.jpg', 
+    output: 'rei-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  
+  // Imágenes de Tratamientos Faciales
+  { 
+    input: 'limpieza.jpg', 
+    output: 'limpieza-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'dermaplan+limp.jpg', 
+    output: 'dermaplan-limp-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'need2.jpg', 
+    output: 'need2-optimized.webp',
+    config: { quality: 85, effort: 6 }
+  },
+  { 
+    input: 'gold2.webp', 
+    output: 'gold2-optimized.webp',
+    config: { quality: 80, effort: 6 }
+  },
+  { 
+    input: 'crio-facial.png', 
+    output: 'crio-facial-optimized.webp',
     config: { quality: 85, effort: 6 }
   },
 ];

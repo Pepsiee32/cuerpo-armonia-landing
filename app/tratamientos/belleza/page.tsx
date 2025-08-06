@@ -17,7 +17,7 @@ export default function CuidadoUnas() {
       duration: "45 min",
       benefits: ["Uñas perfectas", "Variedad de colores", "Cuidado completo", "Acabado profesional"],
       icon: Palette,
-      image: "/tradicional3.jpg?height=300&width=400",
+      image: "/optimized/tradicional3-optimized.webp",
     },
     {
       name: "Esmaltado Semipermanente de Manos",
@@ -26,7 +26,7 @@ export default function CuidadoUnas() {
       duration: "60 min",
       benefits: ["Duración 2-3 semanas", "Brillo intenso", "No se descascara", "Secado inmediato"],
       icon: Palette,
-      image: "/manicura.jpg?height=300&width=400",
+      image: "/optimized/manicura-optimized.webp",
     },
     {
       name: "Capping",
@@ -35,7 +35,7 @@ export default function CuidadoUnas() {
       duration: "90 min",
       benefits: ["Refuerza la uña natural", "Evita quiebres", "Duración prolongada", "Acabado prolijo"],
       icon: Star,
-      image: "/capping2.webp?height=300&width=400",
+      image: "/optimized/capping2-optimized.webp",
     },
     {
       name: "Soft Gel",
@@ -44,7 +44,7 @@ export default function CuidadoUnas() {
       duration: "90 min",
       benefits: ["Uñas más largas", "Mayor resistencia", "Aspecto natural", "Flexibilidad"],
       icon: Star,
-      image: "/softgel.webp?height=300&width=400",
+      image: "/optimized/softgel-optimized.webp",
     },
     {
       name: "Belleza de Pies + Tradicional",
@@ -53,7 +53,7 @@ export default function CuidadoUnas() {
       duration: "60 min",
       benefits: ["Pies suaves", "Uñas perfectas", "Relajación", "Cuidado completo"],
       icon: Sparkles,
-      image: "/pies2.jpg?height=300&width=400",
+      image: "/optimized/pies2-optimized.webp",
     },
     {
       name: "Belleza de Pies + Semipermanente",
@@ -62,7 +62,7 @@ export default function CuidadoUnas() {
       duration: "75 min",
       benefits: ["Larga duración", "Pies impecables", "Resistente al agua", "Brillo duradero"],
       icon: Sparkles,
-      image: "/pies1.jpg?height=300&width=400",
+      image: "/optimized/pies1-optimized.webp",
     },
     {
       name: "Perfilado de Cejas",
@@ -71,7 +71,7 @@ export default function CuidadoUnas() {
       duration: "30 min",
       benefits: ["Cejas definidas", "Forma perfecta", "Realza la mirada", "Resultado inmediato"],
       icon: Eye,
-      image: "/ceja-pesta.jpg?height=300&width=400",
+      image: "/optimized/ceja-pesta-optimized.webp",
     },
     {
       name: "Laminado de Cejas",
@@ -80,7 +80,7 @@ export default function CuidadoUnas() {
       duration: "45 min",
       benefits: ["Efecto peinado duradero", "Cejas más ordenadas", "Realza la expresión", "Acabado natural"],
       icon: Eye,
-      image: "/ceja-pesta.jpg?height=300&width=400",
+      image: "/optimized/ceja-pesta-optimized.webp",
     },    
     {
       name: "Laminado de Cejas + Tinte",
@@ -89,7 +89,7 @@ export default function CuidadoUnas() {
       duration: "60 min",
       benefits: ["Cejas destacadas", "Color intenso", "Efecto peinado duradero", "Mirada más expresiva"],
       icon: Eye,
-      image: "/ceja-pesta.jpg?height=300&width=400",
+      image: "/optimized/ceja-pesta-optimized.webp",
     },    
     {
       name: "Lifting de Pestañas",
@@ -98,7 +98,7 @@ export default function CuidadoUnas() {
       duration: "50 min",
       benefits: ["Mirada más abierta", "Curvatura natural", "Sin necesidad de rizador", "Efecto duradero"],
       icon: Eye,
-      image: "/ceja-pesta.jpg?height=300&width=400",
+      image: "/optimized/ceja-pesta-optimized.webp",
     },
     {
       name: "Lifting de Pestañas + Tinte",
@@ -107,7 +107,7 @@ export default function CuidadoUnas() {
       duration: "60 min",
       benefits: ["Pestañas más oscuras y curvadas", "Mirada definida", "Efecto natural y duradero", "Ideal para no usar máscara"],
       icon: Eye,
-      image: "/ceja-pesta.jpg?height=300&width=400",
+      image: "/optimized/ceja-pesta-optimized.webp",
     },    
   ]
 
@@ -121,15 +121,15 @@ export default function CuidadoUnas() {
   ]
 
   const nailArtImages = [
-    "/nailart.webp",
-    "/nailart7.jpeg",
-    "/nailart3.webp",
-    "/nailart1.webp",
-    "/nailart2.webp",
-    "/nailart4.webp",
-    "/nailart5.webp",
-    "/nailart6.jpeg",
-    "/nailart8.jpeg",
+    "/optimized/nailart-optimized.webp",
+    "/optimized/nailart7-optimized.webp",
+    "/optimized/nailart3-optimized.webp",
+    "/optimized/nailart1-optimized.webp",
+    "/optimized/nailart2-optimized.webp",
+    "/optimized/nailart4-optimized.webp",
+    "/optimized/nailart5-optimized.webp",
+    "/optimized/nailart6-optimized.webp",
+    "/optimized/nailart8-optimized.webp",
     // ...agrega todas las que quieras
   ];
 
@@ -217,6 +217,8 @@ export default function CuidadoUnas() {
                     src={treatment.image}
                     alt={treatment.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={85}
                     className={`object-cover group-hover:scale-105 transition-transform duration-300 ${treatment.name === "Soft Gel" ? "object-bottom" : "object-center"}`}
                   />
                   <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
@@ -307,7 +309,14 @@ export default function CuidadoUnas() {
                         {nailArtImages.map((src, idx) => (
                           <CarouselItem key={idx}>
                             <div className="relative w-full h-64 sm:h-80 md:h-96">
-                              <Image src={src} alt={`Nail art ${idx + 1}`} fill className="object-cover" />
+                              <Image 
+                                src={src} 
+                                alt={`Nail art ${idx + 1}`} 
+                                fill 
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                quality={85}
+                                className="object-cover" 
+                              />
                             </div>
                           </CarouselItem>
                         ))}
