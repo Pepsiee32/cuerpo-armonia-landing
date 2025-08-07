@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, Sparkles, Clock, Star, MessageCircle, CheckCircle, Droplets, Sun, Zap, Heart, ScanFace, Flame, Layers } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 
 export default function TratamientosFaciales() {
     const treatments = [
@@ -242,7 +243,8 @@ export default function TratamientosFaciales() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6 sm:gap-8">
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
               <CardContent className="p-6 sm:p-8">
                 <div className="text-center mb-4 sm:mb-6">
@@ -311,6 +313,91 @@ export default function TratamientosFaciales() {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden">
+            <Carousel className="w-full">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                <CarouselItem className="pl-2 md:pl-4 basis-[85%]">
+                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col justify-between">
+                    <CardContent className="p-6 sm:p-8 md:p-8 h-full flex flex-col justify-between">
+                      <div className="text-center mb-4 sm:mb-6">
+                        <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Renovación Facial</Badge>
+                        <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Renovación Facial Profunda</h3>
+                        <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">3 sesiones diseñadas para renovar tu piel desde las capas más profundas, unificando el tono, suavizando imperfecciones y devolviendo luminosidad a tu rostro</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$110.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $122.000</p>
+                      </div>
+                      <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Limpieza profunda (60 min)
+                        </div>
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Peelings quimicos (60 min c/u)
+                        </div>
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />Evaluación personalizada de tu piel
+                        </div>
+                      </div>
+                      <Button
+                        className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
+                        onClick={() => {
+                          const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Renovación Facial Profunda\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                        }}
+                        aria-label="Consultar paquete renovación facial profunda"
+                      >
+                        Consultar Paquete
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-[85%]">
+                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col justify-between">
+                    <CardContent className="p-6 sm:p-8 md:p-8 h-full flex flex-col justify-between">
+                      <div className="text-center mb-4 sm:mb-6">
+                        <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Antiage</Badge>
+                        <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Brillo y Rejuvenecimiento</h3>
+                        <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">3 sesiones que estimulan tu piel para regenerarse, mejorar su textura y devolverle firmeza, frescura y vitalidad
+                          <br></br>
+                          <br></br>
+                        </p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$110.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $122.000</p>
+                      </div>
+                      <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Limpieza Profunda (60 min)
+                        </div>
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Microneedling (60 min c/u)
+                        </div>
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />Diagnóstico y seguimiento personalizado
+                        </div>
+                      </div>
+                      <Button
+                        className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
+                        onClick={() => {
+                          const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Brillo y Rejuvenecimiento\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                        }}
+                        aria-label="Consultar paquete brillo y rejuvenecimiento"
+                      >
+                        Consultar Paquete
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <div className="flex justify-center mt-6">
+                <div className="flex space-x-2">
+                  <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+                  <div className="w-2 h-2 bg-white/60 rounded-full"></div>
+                </div>
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

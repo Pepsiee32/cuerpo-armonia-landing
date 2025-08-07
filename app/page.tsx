@@ -78,17 +78,17 @@ export default function LandingPage() {
 
   const testimonials = [
     {
-      name: "María G.",
+      name: "María",
       text: "Increíble experiencia. El personal es muy profesional y los tratamientos son de primera calidad. Me siento renovada después de cada visita.",
       rating: 5,
     },
     {
-      name: "Julieta C.",
+      name: "Julieta",
       text: "Sentís la diferencia desde que entrás. Me asesoraron con paciencia y elegimos el tratamiento ideal para mi piel. Volvería mil veces.",
       rating: 5,
     },
     {
-      name: "Maria Laura B.",
+      name: "Maria Laura",
       text: "Me regalaron una tarde de spa. Excelente atención, ambiente cálido y relajante. Super recomendable! Ya tengo turno para volver.",
       rating: 5,
     }    
