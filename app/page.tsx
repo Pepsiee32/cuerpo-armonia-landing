@@ -289,7 +289,7 @@ export default function LandingPage() {
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
               <div className="relative h-40 sm:h-48 overflow-hidden">
                 <Image
-                  src="/optimized/facial-optimized.webp"
+                  src = "/optimized/fac.webp"
                   alt="Tratamientos faciales"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -340,11 +340,11 @@ export default function LandingPage() {
               <div className="relative h-40 sm:h-48 overflow-hidden">
                 <Image
                   src="/optimized/manicura-optimized.webp"
-                  alt="Belleza de Manos, Cejas y Pestañas"
+                  alt="Belleza de Mano, Ceja y Pestaña"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   quality={80}
-                  className="object-cover object-[center_60%] group-hover:cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover object-[center_65%] group-hover:cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-4 sm:p-6">
@@ -486,7 +486,7 @@ export default function LandingPage() {
                 >
                   Consultá disponibilidad
                 </Button>
-              </CardContent>
+              </CardContent>Faciales
             </Card>
 
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl">

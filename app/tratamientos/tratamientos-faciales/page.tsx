@@ -26,7 +26,7 @@ export default function TratamientosFaciales() {
         },
         {
           name: "Dermaplaning + Limpieza",
-          description: "Eliminación de células muertas y vello facial con bisturí dermatológico, combinada con limpieza profunda.",
+          description: "Eliminación de células muertas y vello facial con bisturí dermatológico, combinada con limpieza profunda para una piel más fresca y renovada.",
           price: "$38.000",
           duration: "60 min",
           benefits: [
@@ -40,7 +40,7 @@ export default function TratamientosFaciales() {
         },             
         {
           name: "Microneedling Personalizado",
-          description: "Aplicación de activos como hialurónico, resveratrol, exosomas, hilos tensores o botox mediante micropunción.",
+          description: "Aplicación de activos como hialurónico, resveratrol, exosomas, hilos tensores o botox mediante micropunción, logrando un tratamiento más completo y efectivo.",
           price: "$44.000",
           duration: "60 min",
           benefits: [
@@ -50,13 +50,13 @@ export default function TratamientosFaciales() {
             "Potencia absorción de principios activos"
           ],
           icon: Droplets,
-          image: "/optimized/need2-optimized.webp",
+          image: "/optimized/need2.webp",
         }, 
         {
           name: "Peeling Químico (Green o Gold Peel)",
           description: "Descamación celular profunda con principios activos específicos para tu tipo de piel. Ideal para manchas, textura y firmeza.",
           price: "$44.000",
-          duration: "50 min",
+          duration: "60 min",
           benefits: [
             "Despigmenta manchas y marcas",
             "Renovación celular profunda",
@@ -70,6 +70,7 @@ export default function TratamientosFaciales() {
           name: "Crioradiofrecuencia Facial",
           description: "Un tratamiento no invasivo que combina frío y calor para lograr un efecto tensor, estimular la producción de colágeno y mejorar la firmeza de la piel.",
           price: "$16.000",
+          duration: "30 min",
           benefits: [
             "Reafirma y tonifica la piel",
             "Disminuye arrugas y líneas de expresión",

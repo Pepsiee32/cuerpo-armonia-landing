@@ -18,6 +18,7 @@ export default function TratamientosCorporales() {
       benefits: ["Alivia tensiones", "Mejora circulación", "Relajación profunda", "Bienestar general"],
       icon: Hand,
       image: "/optimized/ventosas1-optimized.webp",
+      //image: "/optimized/massage.webp",
       tipoTecnicas: ["Piedras Calientes", "Ventosas"]
     },
     {
@@ -87,10 +88,9 @@ export default function TratamientosCorporales() {
     },
     {
       name: "Depilación",
-      description: "Depilación con cera y descartables. Consultá por zonas, precios y disponibilidad.",
-      
+      description: "Eliminación del vello no deseado con tecnología láser, segura y efectiva para distintas zonas del cuerpo. Consultá por zonas, precios y disponibilidad.",
       duration: "-",
-      benefits: ["Higiene y seguridad", "Diferentes zonas", "Atención profesional"],
+      benefits: ["Higiene y seguridad", "Resultados duraderos", "Diferentes zonas", "Atención profesional"],
       icon: Scissors, // O el ícono que prefieras
       image: "/optimized/depi-optimized.webp", // O una imagen alusiva si tenés
       isDepilacion: true // (opcional, para personalizar el renderizado si querés)
