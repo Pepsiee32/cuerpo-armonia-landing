@@ -382,8 +382,8 @@ export default function TratamientosCorporales() {
             <Carousel className="w-full">
               <CarouselContent className="-ml-2 md:-ml-4">
                 <CarouselItem className="pl-2 md:pl-4 basis-[85%]">
-                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-                    <CardContent className="p-6 sm:p-8">
+                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col justify-between">
+                    <CardContent className="p-6 sm:p-8 h-full flex flex-col justify-between">
                       <div className="text-center mb-4 sm:mb-6">
                         <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Más Popular</Badge>
                         <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Equilibrio y Bienestar</h3>
@@ -419,8 +419,8 @@ export default function TratamientosCorporales() {
                   </Card>
                 </CarouselItem>
                 <CarouselItem className="pl-2 md:pl-4 basis-[85%]">
-                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-                    <CardContent className="p-6 sm:p-8">
+                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col justify-between">
+                    <CardContent className="p-6 sm:p-8 h-full flex flex-col justify-between">
                       <div className="text-center mb-4 sm:mb-6">
                         <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
                         <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Detox Circulatorio Integral</h3>

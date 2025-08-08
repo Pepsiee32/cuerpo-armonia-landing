@@ -8,7 +8,12 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600
 
 export const metadata: Metadata = {
   title: "Cuerpo y Armonía - Centro de Estética Integral | 15 Años de Experiencia",
-  description: "Centro de estética con más de 15 años de experiencia. Tratamientos faciales, corporales y de uñas en Núñez, Buenos Aires. Atención profesional, cercana y personalizada. Reservá tu turno.",
+  description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
+  icons: {
+    icon: '/logo-no-letter.svg',
+    shortcut: '/logo-no-letter.svg',
+    apple: '/logo-no-letter.svg',
+  },
   keywords: [
     "centro de estética",
     "tratamientos faciales",
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Cuerpo y Armonía - Centro de Estética Integral | 15 Años de Experiencia",
-    description: "Centro de estética con más de 15 años de experiencia. Tratamientos faciales, corporales y de uñas en Núñez, Buenos Aires. Atención profesional, cercana y personalizada.",
+    description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
     url: 'https://cuerpoyarmonia.com.ar',
     siteName: 'Cuerpo y Armonía',
     images: [
@@ -60,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Cuerpo y Armonía - Centro de Estética Integral | 15 Años de Experiencia",
-    description: "Centro de estética con más de 15 años de experiencia. Tratamientos faciales, corporales y de uñas en Núñez, Buenos Aires.",
+    description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
     images: ['/logo-web.svg'],
     creator: '@cuerpoyarmonia',
   },
@@ -89,6 +94,8 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning={true}>
       <head>
+        <link rel="icon" href="/logo-no-letter.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/logo-no-letter.svg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -96,7 +103,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "BeautySalon",
               "name": "Cuerpo y Armonía",
-              "description": "Centro de estética con más de 15 años de experiencia. Tratamientos faciales, corporales y de uñas en Núñez, Buenos Aires.",
+              "description": "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
               "url": "https://cuerpoyarmonia.com.ar",
               "telephone": "+54-11-6374-6069",
               "address": {

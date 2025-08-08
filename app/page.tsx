@@ -348,7 +348,7 @@ export default function LandingPage() {
                 />
               </div>
               <CardContent className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-2 sm:mb-3">Belleza de Manos, Cejas y Pestañas</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-2 sm:mb-3">Belleza Mano, Ceja y Pestaña</h3>
                 <p className="text-sage mb-4 text-sm sm:text-base">Cuidado de manos, perfilado y lifting de pestañas para realzar tu mirada y lucir un estilo cuidado al detalle.</p>
                 <Link 
                   href="/tratamientos/belleza" 
@@ -361,6 +361,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
 
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
