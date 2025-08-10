@@ -486,7 +486,7 @@ export default function LandingPage() {
                 >
                   Consultá disponibilidad
                 </Button>
-              </CardContent>Faciales
+              </CardContent>
             </Card>
 
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl">

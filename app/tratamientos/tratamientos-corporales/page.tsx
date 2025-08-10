@@ -12,7 +12,7 @@ export default function TratamientosCorporales() {
   const treatments = [
     {
       name: "Masaje Descontracturante",
-      description: "Masaje terapéutico para aliviar tensiones y contracturas musculares",
+      description: "Masaje enfocado en liberar contracturas y tensión muscular, mejorando la movilidad.",
       price: "$25.000",
       duration: "60 min",
       benefits: ["Alivia tensiones", "Mejora circulación", "Relajación profunda", "Bienestar general"],
@@ -47,9 +47,7 @@ export default function TratamientosCorporales() {
     {
       name: "Crioradiofrecuencia Corporal + Facial",
       description: "Tratamiento reafirmante y oxigenante. Incluye rostro completo y la opción de trabajar 1, 2 o 3 zonas corporales a elección.",
-      priceBase: "$19.000",
-      priceSecondZone: "$20.000",
-      priceThirdZone: "$22.000",
+      duration: "30-90 min",
       benefits: [
         "Reafirma rostro y cuerpo",
         "Estimula colágeno y elastina",
@@ -68,9 +66,7 @@ export default function TratamientosCorporales() {
     {
       name: "Himfu Corporal",
       description: "Tratamiento focalizado con tecnología HIFU. El precio varía según la cantidad de zonas tratadas.",
-      priceBase: "$13.000",
-      priceSecondZone: "$17.000",
-      priceThirdZone: "$21.000",
+      duration: "30-90 min",
       benefits: [
         "Reducción localizada",
         "Tensa la piel",
@@ -89,7 +85,7 @@ export default function TratamientosCorporales() {
     {
       name: "Depilación",
       description: "Eliminación del vello no deseado con tecnología láser, segura y efectiva para distintas zonas del cuerpo. Consultá por zonas, precios y disponibilidad.",
-      duration: "-",
+      duration: "60 min",
       benefits: ["Higiene y seguridad", "Resultados duraderos", "Diferentes zonas", "Atención profesional"],
       icon: Scissors, // O el ícono que prefieras
       image: "/optimized/depi-optimized.webp", // O una imagen alusiva si tenés
@@ -97,7 +93,7 @@ export default function TratamientosCorporales() {
     },
     {
       name: "Armonización + Reiki",
-      description: "Terapia energética para equilibrar cuerpo y mente con péndulo hebreo y reiki",
+      description: "Terapia energética para equilibrar cuerpo y mente con péndulo hebreo y reiki.",
       price: "$22.000",
       duration: "60 min",
       benefits: ["Relajación profunda", "Equilibrio emocional", "Reducción del estrés", "Renovación energética"],

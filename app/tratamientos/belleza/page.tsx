@@ -12,7 +12,7 @@ export default function CuidadoUnas() {
   const treatments = [
     {
       name: "Esmaltado Tradicional de Manos",
-      description: "Manicura completa con esmaltado tradicional",
+      description: "Manicura completa con esmaltado tradicional.",
       price: "$17.000",
       duration: "60 min",
       benefits: ["Uñas perfectas", "Variedad de colores", "Cuidado completo", "Acabado profesional"],
@@ -21,10 +21,10 @@ export default function CuidadoUnas() {
     },
     {
       name: "Esmaltado Semipermanente de Manos",
-      description: "Manicura con esmaltado semipermanente de larga duración",
+      description: "Manicura con esmaltado semipermanente de larga duración.",
       price: "$20.000",
       duration: "60 min",
-      benefits: ["Duración 2-3 semanas", "Brillo intenso", "No se descascara", "Secado inmediato"],
+      benefits: [ "Brillo intenso", "No se descascara", "Secado inmediato"],
       icon: Palette,
       image: "/optimized/manicura-optimized.webp",
     },
@@ -39,16 +39,16 @@ export default function CuidadoUnas() {
     },
     {
       name: "Soft Gel",
-      description: "Extensión de uñas con gel suave para mayor longitud y resistencia",
+      description: "Extensión de uñas con gel suave para mayor longitud y resistencia. Alternativa moderna para extensiones cómodas y elegantes.",
       price: "$26.000",
       duration: "120 min",
       benefits: ["Uñas más largas", "Mayor resistencia", "Aspecto natural", "Flexibilidad"],
       icon: Star,
-      image: "/optimized/softgel-optimized.webp",
+      image: "/optimized/soft.webp",
     },
     {
       name: "Belleza de Pies + Tradicional",
-      description: "Pedicura completa con esmaltado tradicional",
+      description: "Pedicura completa con esmaltado tradicional.",
       price: "$20.000",
       duration: "90 min",
       benefits: ["Pies suaves", "Uñas perfectas", "Relajación", "Cuidado completo"],
@@ -57,7 +57,7 @@ export default function CuidadoUnas() {
     },
     {
       name: "Belleza de Pies + Semipermanente",
-      description: "Pedicura completa con esmaltado semipermanente",
+      description: "Pedicura completa con esmaltado semipermanente.",
       price: "$22.000",
       duration: "90 min",
       benefits: ["Larga duración", "Pies impecables", "Resistente al agua", "Brillo duradero"],
@@ -66,49 +66,35 @@ export default function CuidadoUnas() {
     },
     {
       name: "Perfilado de Cejas",
-      description: "Diseño y perfilado de cejas con pinza para definir la forma perfecta",
+      description: "Diseño y perfilado de cejas con pinza para definir la forma perfecta.",
       price: "$5.000",
       duration: "30 min",
       benefits: ["Cejas definidas", "Forma perfecta", "Realza la mirada", "Resultado inmediato"],
       icon: Eye,
-      image: "/optimized/ceja-pesta-optimized.webp",
+      image: "/optimized/perfilado.webp",
     },
     {
       name: "Laminado de Cejas",
       description: "Tratamiento que alinea y ordena las cejas para lograr un efecto peinado y natural por varias semanas.",
-      price: "$12.000",
       duration: "45 min",
-      benefits: ["Efecto peinado duradero", "Cejas más ordenadas", "Realza la expresión", "Acabado natural"],
+      benefits: ["Efecto peinado duradero", "Cejas más ordenadas", "Realza la expresión", "Mirada más expresiva"],
       icon: Eye,
       image: "/optimized/ceja-pesta-optimized.webp",
-    },    
-    {
-      name: "Laminado de Cejas + Tinte",
-      description: "Laminado para ordenar y alinear las cejas junto con tinte para intensificar el color y la forma.",
-      price: "$15.000",
-      duration: "60 min",
-      benefits: ["Cejas destacadas", "Color intenso", "Efecto peinado duradero", "Mirada más expresiva"],
-      icon: Eye,
-      image: "/optimized/ceja-pesta-optimized.webp",
+      options: [
+        { label: "sin tinte:", price: "$12.000", duration: "" },
+        { label: "con tinte:", price: "$15.000", duration: "" }],
     },    
     {
       name: "Lifting de Pestañas",
       description: "Técnica que eleva tus pestañas naturales desde la raíz para lograr una curvatura perfecta sin usar extensiones.",
-      price: "$16.000",
       duration: "50 min",
       benefits: ["Mirada más abierta", "Curvatura natural", "Sin necesidad de rizador", "Efecto duradero"],
       icon: Eye,
-      image: "/optimized/ceja-pesta-optimized.webp",
+      image: "/optimized/lifting.webp",
+      options: [
+        { label: "sin tinte:", price: "$16.000", duration: "" },
+        { label: "con tinte:", price: "$18.000", duration: "" }],
     },
-    {
-      name: "Lifting de Pestañas + Tinte",
-      description: "Eleva tus pestañas y suma color para intensificar la mirada con un acabado profundo y definido.",
-      price: "$18.000",
-      duration: "60 min",
-      benefits: ["Pestañas más oscuras y curvadas", "Mirada definida", "Efecto natural y duradero", "Ideal para no usar máscara"],
-      icon: Eye,
-      image: "/optimized/ceja-pesta-optimized.webp",
-    },    
   ]
 
   const nailArtStyles = [
@@ -245,6 +231,20 @@ export default function CuidadoUnas() {
                         <span className="leading-relaxed">{benefit}</span>
                       </div>
                     ))}
+                    {treatment.options && (
+                        <div className="mb-2 space-y-1">
+                          <span className="font-semibold text-sage text-xs sm:text-sm block">Precios:</span>
+                          {treatment.options.map((opt, i) => (
+                            <div key={i} className="flex justify-between text-sage text-xs sm:text-sm">
+                              <span>
+                                {opt.label}
+                                {"duration" in opt && opt.duration ? ` - ${opt.duration}` : ""}
+                              </span>
+                              <span className="font-semibold text-dark-sage">{opt.price}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-base sm:text-lg font-bold text-dark-sage">{treatment.price}</span>
