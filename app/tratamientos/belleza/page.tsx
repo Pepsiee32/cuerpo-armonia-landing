@@ -39,7 +39,7 @@ export default function CuidadoUnas() {
     },
     {
       name: "Soft Gel",
-      description: "Extensión de uñas con gel suave para mayor longitud y resistencia. Alternativa moderna para extensiones cómodas y elegantes.",
+      description: "Extensión de uñas que utiliza tips de gel suave y flexible. Alternativa moderna para extensiones cómodas y elegantes.",
       price: "$26.000",
       duration: "120 min",
       benefits: ["Uñas más largas", "Mayor resistencia", "Aspecto natural", "Flexibilidad"],
@@ -67,7 +67,7 @@ export default function CuidadoUnas() {
     {
       name: "Perfilado de Cejas",
       description: "Diseño y perfilado de cejas con pinza para definir la forma perfecta.",
-      price: "$5.000",
+      price: "$6.000",
       duration: "30 min",
       benefits: ["Cejas definidas", "Forma perfecta", "Realza la mirada", "Resultado inmediato"],
       icon: Eye,
@@ -306,20 +306,32 @@ export default function CuidadoUnas() {
                     <Carousel>
                       <CarouselPrevious className="left-2 z-10" />
                       <CarouselContent>
-                        {nailArtImages.map((src, idx) => (
-                          <CarouselItem key={idx}>
-                            <div className="relative w-full h-64 sm:h-80 md:h-96">
-                              <Image 
-                                src={src} 
-                                alt={`Nail art ${idx + 1}`} 
-                                fill 
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                quality={85}
-                                className="object-cover" 
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
+                        {nailArtImages.map((src, idx) => {
+                          // Imágenes que necesitan object-contain para verse completas
+                          const imagesThatNeedContain = [
+                            "/optimized/nailart2-optimized.webp",
+                            "/optimized/nailart5-optimized.webp", 
+                            "/optimized/nailart6-optimized.webp",
+                            "/optimized/nailart8-optimized.webp"
+                          ];
+                          
+                          const shouldUseContain = imagesThatNeedContain.includes(src);
+                          
+                          return (
+                            <CarouselItem key={idx}>
+                              <div className="relative w-full h-64 sm:h-80 md:h-96">
+                                <Image 
+                                  src={src} 
+                                  alt={`Nail art ${idx + 1}`} 
+                                  fill 
+                                  sizes="(max-width: 768px) 100vw, 50vw"
+                                  quality={85}
+                                  className={shouldUseContain ? "object-cover object-bottom" : "object-cover"} 
+                                />
+                              </div>
+                            </CarouselItem>
+                          );
+                        })}
                       </CarouselContent>
                       <CarouselNext className="right-2 z-10" />
                     </Carousel>
