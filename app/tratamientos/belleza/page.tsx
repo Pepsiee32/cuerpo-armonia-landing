@@ -67,7 +67,7 @@ export default function CuidadoUnas() {
     {
       name: "Perfilado de Cejas",
       description: "Diseño y perfilado de cejas con pinza para definir la forma perfecta.",
-      price: "$6.000",
+      price: "Desde $6.000",
       duration: "30 min",
       benefits: ["Cejas definidas", "Forma perfecta", "Realza la mirada", "Resultado inmediato"],
       icon: Eye,
