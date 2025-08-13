@@ -263,7 +263,7 @@ export default function LandingPage() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-64 sm:h-80 md:h-96 z-0">
               <Image
                 //src="/optimized/hero-optimized.webp"
-                src="/camilla.jpg"
+                src="/optimized/camilla.jpg"
                 alt="Centro de belleza"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

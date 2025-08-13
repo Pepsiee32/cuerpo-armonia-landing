@@ -302,28 +302,30 @@ export default function TratamientosCorporales() {
           </div>
 
           {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 gap-6 sm:gap-8">
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-6 sm:p-8">
-                <div className="text-center mb-4 sm:mb-6">
-                  <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Más Popular</Badge>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Equilibrio y Bienestar</h3>
-                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones que armonizan cuerpo, mente y energía
-                    <br></br>
-                    <br></br>
-                  </p>
-                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$87.000</div>
-                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $97.000</p>
-                </div>
-                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                  <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Masajes Descontracturantes (60 min c/u)
+          <div className="hidden md:grid md:grid-cols-3 gap-6 sm:gap-8">
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col">
+              <CardContent className="p-6 sm:p-8 h-full flex flex-col justify-between">
+                <div>
+                  <div className="text-center mb-4 sm:mb-6">
+                    <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Más Popular</Badge>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Equilibrio y Bienestar</h3>
+                    <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones que armonizan cuerpo, mente y energía
+                      <br></br>
+                      <br></br>
+                    </p>
+                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$87.000</div>
+                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $97.000</p>
                   </div>
-                  <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Armonización + Reiki (60 min)
-                  </div>
-                  <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />1 Drenaje Linfático Manual (45 min)
+                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Masajes Descontracturantes (60 min c/u)
+                    </div>
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Armonización + Reiki (60 min)
+                    </div>
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />1 Drenaje Linfático Manual (45 min)
+                    </div>
                   </div>
                 </div>
                 <Button
@@ -339,24 +341,26 @@ export default function TratamientosCorporales() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl">
-              <CardContent className="p-6 sm:p-8">
-                <div className="text-center mb-4 sm:mb-6">
-                  <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Detox Circulatorio Integral</h3>
-                  <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para activar circulación, eliminar líquidos y relajar el cuerpo</p>
-                  <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
-                  <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
-                </div>
-                <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                  <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Presoterapia + Ondas Rusas (60 min c/u)
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col">
+              <CardContent className="p-6 sm:p-8 h-full flex flex-col justify-between">
+                <div>
+                  <div className="text-center mb-4 sm:mb-6">
+                    <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Detox Circulatorio Integral</h3>
+                    <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para activar circulación, eliminar líquidos y relajar el cuerpo</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
+                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
                   </div>
-                  <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Drenaje Linfático Manual (45 min)
-                  </div>
-                  <div className="flex items-center text-xs sm:text-sm text-sage">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />1 Masaje Descontracturante (60 min)
+                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />2 Presoterapia + Ondas Rusas (60 min c/u)
+                    </div>
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />1 Drenaje Linfático Manual (45 min)
+                    </div>
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />1 Masaje Descontracturante (60 min)
+                    </div>
                   </div>
                 </div>
                 <Button
@@ -366,6 +370,35 @@ export default function TratamientosCorporales() {
                     window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
                   }}
                   aria-label="Consultar paquete detox circulatorio integral"
+                >
+                  Consultar Paquete
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col">
+              <CardContent className="p-6 sm:p-8 h-full flex flex-col justify-between">
+                <div>
+                  <div className="text-center mb-4 sm:mb-6">
+                    <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Alivio Muscular</Badge>
+                    <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Intensivo Descontracturante</h3>
+                    <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para aliviar tensión muscular, mejorar la circulación y relajar el cuerpo.</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
+                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
+                  </div>
+                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    <div className="flex items-center text-xs sm:text-sm text-sage">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />4 Masajes Descontracturantes (60 min c/u)
+                    </div>
+                  </div>
+                </div>
+                <Button
+                  className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
+                  onClick={() => {
+                    const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Intensivo Descontracturante" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                  }}
+                  aria-label="Consultar Paquete Intensivo Descontracturante"
                 >
                   Consultar Paquete
                 </Button>
@@ -448,9 +481,38 @@ export default function TratamientosCorporales() {
                     </CardContent>
                   </Card>
                 </CarouselItem>
+                <CarouselItem className="pl-2 md:pl-4 basis-[85%]">
+                  <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg rounded-3xl h-full flex flex-col justify-between">
+                    <CardContent className="p-6 sm:p-8 h-full flex flex-col justify-between">
+                      <div className="text-center mb-4 sm:mb-6">
+                        <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Alivio Muscular</Badge>
+                        <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Intensivo Descontracturante</h3>
+                        <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para aliviar tensión muscular acumulada, mejorar la circulación y relajar profundamente el cuerpo.</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
+                      </div>
+                      <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                        <div className="flex items-center text-xs sm:text-sm text-sage">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 mr-2 flex-shrink-0" />4 Masajes Descontracturantes (60 min c/u)
+                        </div>
+                      </div>
+                      <Button
+                        className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
+                        onClick={() => {
+                          const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Intensivo Descontracturante" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
+                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                        }}
+                        aria-label="Consultar Paquete Intensivo Descontracturante"
+                      >
+                        Consultar Paquete
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
               </CarouselContent>
               <div className="flex justify-center mt-6">
                 <div className="flex space-x-2">
+                  <div className="w-2 h-2 bg-white/60 rounded-full"></div>
                   <div className="w-2 h-2 bg-white/60 rounded-full"></div>
                   <div className="w-2 h-2 bg-white/60 rounded-full"></div>
                 </div>
