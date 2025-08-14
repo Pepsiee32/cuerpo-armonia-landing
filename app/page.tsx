@@ -167,7 +167,7 @@ export default function LandingPage() {
                 alt="Cuerpo y Armonia Logo"
                 width={400}
                 height={400}
-                className="mx-auto w-48 sm:w-80 md:w-96 lg:w-[500px] mt-28 sm:mt-4 h-64 sm:h-80 md:h-96 lg:h-[500px] object-contain object-center"
+                className="mx-auto w-48 sm:w-80 md:w-96 lg:w-[450px] mt-28 sm:mt-4 h-64 sm:h-80 md:h-96 lg:h-[450px] object-contain object-center"
               />
             </div>
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-4 px-2">
@@ -176,7 +176,7 @@ export default function LandingPage() {
                Estética Integral 
             </h1>
             <p style={{ color: "#fff9f3" }} className="text-lg sm:text-xl md:text-2xl font-light mb-6 sm:mb-8 px-2">"Renová tu esencia"</p>
-            <p style={{ color: "#fff9f3" }} className="text-base sm:text-lg md:text-xl font-light mb-6 sm:mb-8 px-2 leading-relaxed">Hace más de 15 años te acompañamos a descubrir tu mejor versión, con cuidado profesional, atención cercana y un espacio de cuidado y renovación.</p>
+            <p style={{ color: "#fff9f3" }} className="text-base sm:text-lg md:text-xl font-light mb-6 sm:mb-8 px-2 leading-relaxed">Sentite renovada y radiante en un espacio creado para tu bienestar. Hace más de 15 años te acompañamos a descubrir tu mejor versión, con cuidado profesional y un espacio de renovación.</p>
             <p style={{ color: "#fff9f3" }} className="text-base sm:text-lg md:text-xl font-light mb-6 sm:mb-8 px-2">Tratamientos para tu cuerpo, mente y esencia.</p>
           </div>
 

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Palette, Clock, Star, MessageCircle, CheckCircle, Sparkles, Heart, Crown, Eye, Scissors, Gem } from "lucide-react"
+import { ArrowLeft, Palette, Clock, Star, MessageCircle, CheckCircle, Sparkles, Heart, Eye, Gem, Hand } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -98,11 +98,20 @@ export default function CuidadoUnas() {
     {
       name: "Paquete Belleza",
       description: "4 sesiones para lucir manos, pies y mirada impecables, resaltando tu belleza natural con acabados profesionales y duraderos. \n\n Tenés hasta 45 días desde la compra para usar todas las sesiones.",
-      price: "$68.000",
+      price: "$65.000",
       duration: "60 min c/u",
-      benefits: ["Esmaltado Semipermanente de Manos", "Belleza de Pies Semipermanente", "Laminado de Cejas con Tinte", "Lifting de Pestañas con Tinte"],
+      benefits: ["Esmaltado Semipermanente de Manos", "Belleza de Pies Semipermanente", "Laminado de Cejas sin Tinte", "Lifting de Pestañas con Tinte"],
       icon: Gem,
       image: "/optimized/belleza.webp",
+    },
+    {
+      name: "Paquete Relax & Belleza",
+      description: "4 sesiones para relajar cuerpo y renovar tu imagen: masajes para aliviar tensiones y uñas impecables con acabados duraderos. \n\n Tenés hasta 45 días desde la compra para usar todas las sesiones.",
+      price: "$83.000",
+      duration: "60 min c/u",
+      benefits: ["2 Masajes Descontracturantes", "Esmaltado Semipermanente de Manos", "Belleza de Pies Semipermanente"],
+      icon: Hand,
+      image: "/optimized/paquetemasaje.webp",
     },
   ]
 
@@ -215,7 +224,7 @@ export default function CuidadoUnas() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     quality={85}
                     className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
-                      treatment.name === "Soft Gel" || treatment.name === "Paquete Belleza" 
+                      treatment.name === "Soft Gel" || treatment.name === "Paquete Belleza" || treatment.name === "Paquete Relax & Belleza"
                         ? "object-bottom" 
                         : "object-center"
                     }`}
@@ -235,7 +244,7 @@ export default function CuidadoUnas() {
                   <p className="text-sage mb-4 text-sm leading-relaxed">{treatment.description}</p>
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center mb-1 mt-2">
-                      {treatment.name === "Paquete Belleza" ? (
+                      {treatment.name === "Paquete Belleza" || treatment.name === "Paquete Relax & Belleza" ? (
                         <>
                           <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-sage mr-2" />
                           <span className="font-semibold text-dark-sage text-sm sm:text-base">Incluye:</span>

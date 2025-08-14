@@ -70,7 +70,7 @@ export default function TratamientosFaciales() {
           name: "Crioradiofrecuencia Facial",
           description: "Un tratamiento no invasivo que combina frío y calor para lograr un efecto tensor, estimular la producción de colágeno y mejorar la firmeza de la piel.",
           price: "$16.000",
-          duration: "30 min",
+          duration: "40 min",
           benefits: [
             "Reafirma y tonifica la piel",
             "Disminuye arrugas y líneas de expresión",
