@@ -195,91 +195,51 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="beneficios" className="py-12 sm:py-16 md:py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-sage mb-4 px-2">¿Por qué elegirnos?</h2>
-            <p className="text-base sm:text-lg text-sage max-w-2xl mx-auto px-2">
-              Descubre los beneficios que nos hacen únicos en el cuidado de tu belleza y bienestar
-            </p>
-          </div>
+             {/* Benefits Section */}
+       <section id="beneficios" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+         <div className="max-w-6xl mx-auto">
+           <div className="text-center mb-12 sm:mb-16">
+             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-cream mb-4 px-2">¿Por qué elegirnos?</h2>
+             <p className="text-base sm:text-lg text-cream/80 max-w-2xl mx-auto px-2">
+               Descubre los beneficios que nos hacen únicos en el cuidado de tu belleza y bienestar
+             </p>
+           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
-              <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-sage/20 transition-colors duration-300">
-                  <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Cuidado Profesional</h3>
-                <p className="text-sage text-sm sm:text-base">Cada detalle de nuestros tratamientos está pensado para brindarte seguridad, efectividad y una experiencia reconfortante</p>
-              </CardContent>
-            </Card>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
+               <CardContent className="p-6 sm:p-8 text-center">
+                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                   <ShieldCheck className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
+                 </div>
+                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Cuidado Profesional</h3>
+                 <p className="text-sage text-sm sm:text-base">Cada detalle de nuestros tratamientos está pensado para brindarte seguridad, efectividad y una experiencia reconfortante</p>
+               </CardContent>
+             </Card>
 
-            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
-              <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-sage/20 transition-colors duration-300">
-                  <Hand className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Tratamientos Personalizados</h3>
-                <p className="text-sage text-sm sm:text-base">Cada tratamiento se adapta a tus necesidades específicas y tipo de piel</p>
-              </CardContent>
-            </Card>
+             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
+               <CardContent className="p-6 sm:p-8 text-center">
+                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                   <Hand className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
+                 </div>
+                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Tratamientos Personalizados</h3>
+                 <p className="text-sage text-sm sm:text-base">Cada tratamiento se adapta a tus necesidades específicas y tipo de piel</p>
+               </CardContent>
+             </Card>
 
-            <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
-              <CardContent className="p-6 sm:p-8 text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-sage/20 transition-colors duration-300">
-                  <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Bienestar Integral</h3>
-                <p className="text-sage text-sm sm:text-base">Equilibrio entre belleza exterior y salud interior para una transformación completa</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
+               <CardContent className="p-6 sm:p-8 text-center">
+                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-sage/20 transition-colors duration-300">
+                   <Heart className="h-6 w-6 sm:h-8 sm:w-8 text-sage" />
+                 </div>
+                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Bienestar Integral</h3>
+                 <p className="text-sage text-sm sm:text-base">Equilibrio entre belleza exterior y salud interior para una transformación completa</p>
+               </CardContent>
+             </Card>
+           </div>
+         </div>
+       </section>
 
-      {/* About Us Section */}
-      <section id="nosotros" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div>
-              <div className="bg-white/90 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10">
-                <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Sobre Nosotros</Badge>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 sm:mb-6">
-                  15 años de experiencia en belleza y bienestar
-                </h2>
-                <p className="text-base sm:text-lg text-sage mb-4 sm:mb-6 leading-relaxed">
-                  En Cuerpo y Armonia creemos que la verdadera belleza nace del equilibrio entre cuerpo, mente y espíritu.
-                  Durante más de una década, hemos sido el refugio de bienestar para cientos de personas que buscan cuidar
-                  su imagen y renovar su energía.
-                </p>
-                <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 leading-relaxed">
-                Nuestro equipo de profesionales altamente capacitados aplica técnicas efectivas y productos de calidad, brindando resultados reales en un ambiente de total relajación y confort.
-                </p>
-                <Button className="bg-sage hover:bg-dark-sage text-white rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base"
-                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?', '_blank')}
-                >
-                  Viví la experiencia Cuerpo y Armonia
-                </Button>
-              </div>
-            </div>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-64 sm:h-80 md:h-96 z-0">
-              <Image
-                //src="/optimized/hero-optimized.webp"
-                src="/optimized/camilla.jpg"
-                alt="Centro de belleza"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={85}
-                className="object-cover rounded-3xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
+             {/* Services Section */}
       <section id="servicios" className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -425,16 +385,56 @@ export default function LandingPage() {
               />
             ))}
           </div>
-        </div>
-      </section>
+                 </div>
+       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 bg-off-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">FAQ</Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Preguntas frecuentes</h2>
+               {/* About Us Section */}
+        <section id="nosotros" className="py-12 sm:py-16 md:py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+              <div>
+                <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10">
+                  <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Sobre Nosotros</Badge>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 sm:mb-6">
+                    15 años de experiencia en belleza y bienestar
+                  </h2>
+                  <p className="text-base sm:text-lg text-sage mb-4 sm:mb-6 leading-relaxed">
+                    En Cuerpo y Armonia creemos que la verdadera belleza nace del equilibrio entre cuerpo, mente y espíritu.
+                    Durante más de una década, hemos sido el refugio de bienestar para cientos de personas que buscan cuidar
+                    su imagen y renovar su energía.
+                  </p>
+                  <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 leading-relaxed">
+                  Nuestro equipo de profesionales altamente capacitados aplica técnicas efectivas y productos de calidad, brindando resultados reales en un ambiente de total relajación y confort.
+                  </p>
+                  <Button className="bg-sage hover:bg-dark-sage text-white rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base"
+                    onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?', '_blank')}
+                  >
+                    Viví la experiencia Cuerpo y Armonia
+                  </Button>
+                </div>
+              </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-64 sm:h-80 md:h-96 z-0">
+                <Image
+                  //src="/optimized/hero-optimized.webp"
+                  src="/optimized/camilla.jpg"
+                  alt="Centro de belleza"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={85}
+                  className="object-cover rounded-3xl"
+                />
+              </div>
+            </div>
           </div>
+        </section>
+
+               {/* FAQ Section */}
+       <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+         <div className="max-w-4xl mx-auto">
+           <div className="text-center mb-12 sm:mb-16">
+             <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">FAQ</Badge>
+             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-4 px-2">Preguntas frecuentes</h2>
+           </div>
 
           <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
@@ -469,13 +469,13 @@ export default function LandingPage() {
       {/* Suscripción a Promos */}
       <SuscripcionPromos />
 
-      {/* Contact Section */}
-      <section id="contacto" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Contacto</Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-4 px-2">Visítanos o contáctanos</h2>
-          </div>
+             {/* Contact Section */}
+       <section id="contacto" className="py-12 sm:py-16 md:py-20 px-4">
+         <div className="max-w-6xl mx-auto">
+           <div className="text-center mb-12 sm:mb-16">
+             <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Contacto</Badge>
+             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Visítanos o contáctanos</h2>
+           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl">

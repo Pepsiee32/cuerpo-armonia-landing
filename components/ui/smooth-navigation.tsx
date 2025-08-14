@@ -36,15 +36,15 @@ export function SmoothNavigation() {
     }
   }
 
-  const navigationItems = [
-    { name: "Inicio", id: "hero" },
-    { name: "Beneficios", id: "beneficios" },
-    { name: "Nosotros", id: "nosotros" },
-    { name: "Servicios", id: "servicios" },
-    { name: "Testimonios", id: "testimonios" },
-    { name: "FAQ", id: "faq" },
-    { name: "Contacto", id: "contacto" },
-  ]
+     const navigationItems = [
+     { name: "Inicio", id: "hero" },
+     { name: "Beneficios", id: "beneficios" },
+     { name: "Servicios", id: "servicios" },
+     { name: "Testimonios", id: "testimonios" },
+     { name: "Nosotros", id: "nosotros" },
+     { name: "FAQ", id: "faq" },
+     { name: "Contacto", id: "contacto" },
+   ]
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -54,16 +54,16 @@ export function SmoothNavigation() {
     }`}>
       <div className="max-w-6xl mx-auto px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center group">
-            <Image 
-              src="/logo-no-letter.svg" 
-              alt="Cuerpo y Armonia" 
-              width={40} 
-              height={40} 
-              className="transition-transform group-hover:scale-105" 
-            />
-          </div>
+                     {/* Logo */}
+           <div className="flex items-center group">
+             <Image 
+               src="/logo-no-letter.svg" 
+               alt="Cuerpo y Armonia" 
+               width={56} 
+               height={56} 
+               className="transition-transform group-hover:scale-105" 
+             />
+           </div>
 
                      {/* Navigation Menu - Desktop */}
            <div className="hidden md:flex items-center space-x-6">
