@@ -22,7 +22,7 @@ const config: Config = {
       colors: {
         cream: "#efeca9",
         sage: "#45685a",
-        "dark-sage": "#293935",
+        "dark-sage": "#293935",//41733F
         "off-white": "#fff9f3",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

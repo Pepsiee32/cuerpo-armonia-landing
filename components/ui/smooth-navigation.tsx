@@ -40,6 +40,7 @@ export function SmoothNavigation() {
      { name: "Inicio", id: "hero" },
      { name: "Beneficios", id: "beneficios" },
      { name: "Servicios", id: "servicios" },
+     { name: "Experiencias", id: "experiencias-exclusivas" },
      { name: "Testimonios", id: "testimonios" },
      { name: "Nosotros", id: "nosotros" },
      { name: "FAQ", id: "faq" },

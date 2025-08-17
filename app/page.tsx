@@ -61,7 +61,7 @@ function SuscripcionPromos() {
           />
           <button
             type="submit"
-            className="bg-sage hover:bg-dark-sage text-white rounded-full px-6 py-3 sm:py-2 font-semibold transition text-sm sm:text-base"
+            className="bg-dark-sage hover:bg-sage text-white rounded-full px-6 py-3 sm:py-2 font-semibold transition text-sm sm:text-base"
           >
             Suscribirme
           </button>
@@ -200,7 +200,7 @@ export default function LandingPage() {
          <div className="max-w-6xl mx-auto">
            <div className="text-center mb-12 sm:mb-16">
              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-cream mb-4 px-2">¿Por qué elegirnos?</h2>
-             <p className="text-base sm:text-lg text-cream/80 max-w-2xl mx-auto px-2">
+             <p className="text-base sm:text-lg text-off-white max-w-2xl mx-auto px-2">
                Descubre los beneficios que nos hacen únicos en el cuidado de tu belleza y bienestar
              </p>
            </div>
@@ -240,13 +240,13 @@ export default function LandingPage() {
        </section>
 
              {/* Services Section */}
-      <section id="servicios" className="py-12 sm:py-16 md:py-20 px-4">
+      <section id="servicios" className="py-12 sm:py-16 md:py-20 px-4 bg-off-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Nuestros Servicios</Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Tratamientos destacados</h2>
-            <p className="text-base sm:text-lg text-sage max-w-2xl mx-auto px-2">
-              Descubre nuestra selección de tratamientos más populares, diseñados para realzar tu belleza natural
+            <p className="text-base sm:text-lg text-dark-sage max-w-2xl mx-auto px-2">
+              Descubre nuestra selección de tratamientos más populares, diseñados para realzar tu belleza natural.
             </p>
           </div>
 
@@ -265,11 +265,11 @@ export default function LandingPage() {
               <CardContent className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-2 sm:mb-3">Tratamientos Faciales</h3>
                 <p className="text-sage mb-4 text-sm sm:text-base">
-                  Limpieza profunda, hidratación y rejuvenecimiento para todo tipo de piel
+                  Limpieza profunda, hidratación y rejuvenecimiento para todo tipo de piel.
                 </p>
                 <Link 
                   href="/tratamientos/tratamientos-faciales" 
-                  className="inline-flex items-center justify-center border border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
+                  className="inline-flex items-center justify-center border border-dark-sage text-dark-sage hover:bg-dark-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
                   Explorá nuestros faciales
                 </Link>
@@ -290,11 +290,11 @@ export default function LandingPage() {
               <CardContent className="p-4 sm:p-6">
                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-2 sm:mb-3">Tratamientos Corporales</h3>
                 <p className="text-sage mb-4 text-sm sm:text-base">
-                  Masajes relajantes, exfoliación y tratamientos reductivos para tu cuerpo
+                  Masajes relajantes, exfoliación y tratamientos reductivos para tu cuerpo.
                 </p>
                 <Link 
                   href="/tratamientos/tratamientos-corporales" 
-                  className="inline-flex items-center justify-center border border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
+                  className="inline-flex items-center justify-center border border-dark-sage text-dark-sage hover:bg-dark-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
                   Conocé las opciones corporales
                 </Link>
@@ -317,7 +317,7 @@ export default function LandingPage() {
                 <p className="text-sage mb-4 text-sm sm:text-base">Cuidado de manos, perfilado y lifting de pestañas para realzar tu mirada y lucir un estilo cuidado al detalle.</p>
                 <Link 
                   href="/tratamientos/belleza" 
-                  className="inline-flex items-center justify-center border border-sage text-sage hover:bg-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
+                  className="inline-flex items-center justify-center border border-dark-sage text-dark-sage hover:bg-dark-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
                   Realzá tu mirada y mano
                 </Link>
@@ -327,13 +327,117 @@ export default function LandingPage() {
         </div>
       </section>
 
+             {/* Experiencias Exclusivas Section */}
+       <section id="experiencias-exclusivas" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Experiencias Exclusivas</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-4 px-2">Momentos únicos para compartir</h2>
+            <p className="text-base sm:text-lg text-off-white max-w-3xl mx-auto px-2">
+              Celebra momentos especiales con experiencias premium diseñadas para crear recuerdos inolvidables.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {/* SPA Party */}
+            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
+              <div className="relative h-48 sm:h-56 overflow-hidden">
+                <Image
+                  src="/optimized/spa-nenas.webp"
+                  alt="SPA Party para cumpleaños de nenas"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={85}
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute top-4 right-4">
+                  <span className="text-2xl">🎉</span>
+                </div>
+              </div>
+              <CardContent className="p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-dark-sage mb-3">SPA Party</h3>
+                <p className="text-sage mb-6 text-sm sm:text-base leading-relaxed">
+                  Celebra el cumpleaños de las más pequeñas con una experiencia mágica. Maquillaje, manicura, peinados y tratamientos especiales para que se sientan como princesas.
+                </p>
+                <Button 
+                  className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
+                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20Party%20para%20cumpleaños%20de%20nenas.%20¿Podés%20darme%20más%20información?', '_blank')}
+                >
+                  Reservar SPA Party
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* SPA con Amigas */}
+            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
+              <div className="relative h-48 sm:h-56 overflow-hidden">
+                <Image
+                  src="/optimized/spa-amiga.webp"
+                  alt="SPA con amigas"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={85}
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute top-4 right-4">
+                  <span className="text-2xl">👯‍♀️</span>
+                </div>
+              </div>
+              <CardContent className="p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-dark-sage mb-3">SPA con Amigas</h3>
+                <p className="text-sage mb-6 text-sm sm:text-base leading-relaxed">
+                  Disfruta de un día completo de relax y belleza con tus mejores amigas. Incluye masaje descontracturante, presoterapia, limpieza de cutis y merienda.
+                </p>
+                <Button 
+                  className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
+                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20con%20amigas.%20¿Podés%20darme%20más%20información%20y%20precios?', '_blank')}
+                >
+                  Reservar SPA con Amigas
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* SPA en Pareja */}
+            <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-3xl overflow-hidden group">
+              <div className="relative h-48 sm:h-56 overflow-hidden">
+                <Image
+                  src="/optimized/spa-pareja.webp"
+                  alt="SPA en pareja"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={85}
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                <div className="absolute top-4 right-4">
+                  <span className="text-2xl">💕</span>
+                </div>
+              </div>
+              <CardContent className="p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold text-dark-sage mb-3">SPA en Pareja</h3>
+                <p className="text-sage mb-6 text-sm sm:text-base leading-relaxed">
+                Comparte un momento romántico y relajante con tu pareja. Incluye masaje descontracturante, presoterapia, limpieza de cutis y merienda.  
+                </p>
+                <Button 
+                  className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
+                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20en%20pareja.%20¿Podés%20darme%20más%20información%20y%20precios?', '_blank')}
+                >
+                  Reservar SPA en Pareja
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
-      <section id="testimonios" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+      <section id="testimonios" className="py-12 sm:py-16 md:py-20 px-4 bg-off-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Testimonios</Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-4 px-2">Lo que dicen nuestros clientes</h2>
+            <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Testimonios</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Lo que dicen nuestros clientes</h2>
           </div>
 
           <div className="relative">
@@ -347,14 +451,14 @@ export default function LandingPage() {
                 <p className="text-base sm:text-lg text-sage mb-4 sm:mb-6 italic leading-relaxed px-2">
                   "{testimonials[currentTestimonial].text}"
                 </p>
-                <h3 className="text-lg sm:text-xl font-bold text-dark-sage">{testimonials[currentTestimonial].name}</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-sage">{testimonials[currentTestimonial].name}</h3>
               </CardContent>
             </Card>
 
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 rounded-full border-sage text-sage bg-transparent hover:bg-sage hover:text-white focus:bg-transparent active:bg-transparent focus:hover:bg-sage focus:hover:text-white active:hover:bg-sage active:hover:text-white w-12 h-12 sm:w-14 sm:h-14"
+              className = "absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 rounded-full border-sage text-sage bg-transparent hover:bg-sage hover:text-white focus:bg-transparent active:bg-transparent focus:hover:bg-sage focus:hover:text-white active:hover:bg-sage active:hover:text-white w-12 h-12 sm:w-14 sm:h-14"
               onClick={prevTestimonial}
               aria-label="Ver testimonio anterior"
             >
@@ -364,7 +468,7 @@ export default function LandingPage() {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 rounded-full border-sage text-sage bg-transparent hover:bg-sage hover:text-white focus:bg-transparent active:bg-transparent focus:hover:bg-sage focus:hover:text-white active:hover:bg-sage active:hover:text-white w-12 h-12 sm:w-14 sm:h-14"
+              className = "absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 rounded-full border-sage text-sage bg-transparent hover:bg-sage hover:text-white focus:bg-transparent active:bg-transparent focus:hover:bg-sage focus:hover:text-white active:hover:bg-sage active:hover:text-white w-12 h-12 sm:w-14 sm:h-14"
               onClick={nextTestimonial}
               aria-label="Ver testimonio siguiente"
             >
@@ -389,24 +493,24 @@ export default function LandingPage() {
        </section>
 
                {/* About Us Section */}
-        <section id="nosotros" className="py-12 sm:py-16 md:py-20 px-4">
+        <section id="nosotros" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
-                <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10">
-                  <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Sobre Nosotros</Badge>
+                <div className="bg-white/90 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10">
+                  <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Sobre Nosotros</Badge>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 sm:mb-6">
                     15 años de experiencia en belleza y bienestar
                   </h2>
-                  <p className="text-base sm:text-lg text-sage mb-4 sm:mb-6 leading-relaxed">
+                  <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     En Cuerpo y Armonia creemos que la verdadera belleza nace del equilibrio entre cuerpo, mente y espíritu.
                     Durante más de una década, hemos sido el refugio de bienestar para cientos de personas que buscan cuidar
                     su imagen y renovar su energía.
                   </p>
-                  <p className="text-base sm:text-lg text-sage mb-6 sm:mb-8 leading-relaxed">
+                  <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                   Nuestro equipo de profesionales altamente capacitados aplica técnicas efectivas y productos de calidad, brindando resultados reales en un ambiente de total relajación y confort.
                   </p>
-                  <Button className="bg-sage hover:bg-dark-sage text-white rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base"
+                  <Button className="bg-dark-sage hover:bg-sage text-white rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base"
                     onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?', '_blank')}
                   >
                     Viví la experiencia Cuerpo y Armonia
@@ -415,7 +519,6 @@ export default function LandingPage() {
               </div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full h-64 sm:h-80 md:h-96 z-0">
                 <Image
-                  //src="/optimized/hero-optimized.webp"
                   src="/optimized/camilla.jpg"
                   alt="Centro de belleza"
                   fill
@@ -429,11 +532,11 @@ export default function LandingPage() {
         </section>
 
                {/* FAQ Section */}
-       <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
+       <section id="faq" className="py-12 sm:py-16 md:py-20 px-4 bg-off-white">
          <div className="max-w-4xl mx-auto">
            <div className="text-center mb-12 sm:mb-16">
-             <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">FAQ</Badge>
-             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-4 px-2">Preguntas frecuentes</h2>
+             <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">FAQ</Badge>
+             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Preguntas frecuentes</h2>
            </div>
 
           <div className="space-y-3 sm:space-y-4">
@@ -470,11 +573,11 @@ export default function LandingPage() {
       <SuscripcionPromos />
 
              {/* Contact Section */}
-       <section id="contacto" className="py-12 sm:py-16 md:py-20 px-4">
+       <section id="contacto" className="py-12 sm:py-16 md:py-20 px-4 bg-sage">
          <div className="max-w-6xl mx-auto">
            <div className="text-center mb-12 sm:mb-16">
-             <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Contacto</Badge>
-             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Visítanos o contáctanos</h2>
+             <Badge className="bg-cream text-dark-sage border-cream/20 mb-4">Contacto</Badge>
+             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cream mb-4 px-2">Visítanos o contáctanos</h2>
            </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -534,12 +637,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <footer className="bg-dark-sage text-white">
+      <footer className="bg-dark-sage text-off-white">
         <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="md:col-span-2">
               <h2 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Cuerpo y Armonia</h2>
-              <p className="text-white/80 mb-4 leading-relaxed text-sm sm:text-base">
+              <p className="text-off-white/80 mb-4 leading-relaxed text-sm sm:text-base">
                 Tu centro de belleza y bienestar de confianza. 15 años cuidando tu imagen, potenciando tu esencia y brindando resultados reales en un entorno de armonía y calidez.
               </p>
             </div>
@@ -578,7 +681,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="border-t border-white/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-white/60 text-xs sm:text-sm pb-6 sm:pb-0">
+          <div className="border-t border-off-white/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-off-white/60 text-xs sm:text-sm pb-6 sm:pb-0">
             <p>
               &copy; 2025 Cuerpo y Armonia. Todos los derechos reservados. |
               <Link href="/legales" className="underline hover:text-white ml-1">Legales</Link>
