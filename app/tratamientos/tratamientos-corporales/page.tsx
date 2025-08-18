@@ -133,7 +133,7 @@ export default function TratamientosCorporales() {
       <section className="relative py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-r from-sage/10 to-dark-sage/10">
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Tratamientos Corporales</Badge>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold text-dark-sage mb-4 sm:mb-6 px-2">Bienestar para tu Cuerpo</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold text-dark-sage mb-4 sm:mb-6 px-2">Cuidado Corporal Profesional</h1>
           <p className="text-base sm:text-lg md:text-xl text-sage max-w-3xl mx-auto mb-6 sm:mb-8 font-light px-2 leading-relaxed">
           Descubrí nuestra línea de tratamientos corporales diseñada para ayudarte a liberar tensiones, activar tu circulación y recuperar tu energía. Desde masajes relajantes hasta cuidados reductivos, cada propuesta se adapta a tus necesidades y objetivos personales.
           </p>

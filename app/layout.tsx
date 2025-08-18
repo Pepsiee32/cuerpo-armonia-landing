@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600"] })
 
 export const metadata: Metadata = {
-  title: "Cuerpo y Armonía - Centro de Estética Integral | 15 Años de Experiencia",
+  title: "Cuerpo y Armonía - Centro de Estética Integral en Nuñez",
   description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
   icons: {
     icon: '/logo-no-letter.svg',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Cuerpo y Armonía - Centro de Estética Integral | 15 Años de Experiencia",
+    title: "Cuerpo y Armonía - Centro de Estética Integral en Nuñez",
     description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
     url: 'https://cuerpoyarmonia.com.ar',
     siteName: 'Cuerpo y Armonía',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Cuerpo y Armonía - Centro de Estética Integral | 15 Años de Experiencia",
+    title: "Cuerpo y Armonía - Centro de Estética Integral en Nuñez",
     description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
     images: ['/logo-web.svg'],
     creator: '@cuerpoyarmonia',
