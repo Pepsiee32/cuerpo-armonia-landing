@@ -245,7 +245,7 @@ export default function LandingPage() {
           <div className="text-center mb-12 sm:mb-16">
             <Badge className="bg-sage/10 text-sage border-sage/20 mb-4">Nuestros Servicios</Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-sage mb-4 px-2">Tratamientos destacados</h2>
-            <p className="text-base sm:text-lg text-dark-sage max-w-2xl mx-auto px-2">
+            <p className="text-base sm:text-lg text-sage max-w-2xl mx-auto px-2">
               Descubre nuestra selección de tratamientos más populares, diseñados para realzar tu belleza natural.
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function LandingPage() {
                 </p>
                 <Link 
                   href="/tratamientos/tratamientos-faciales" 
-                  className="inline-flex items-center justify-center border border-dark-sage text-dark-sage hover:bg-dark-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
+                  className="inline-flex items-center justify-center bg-sage hover:bg-dark-sage text-white rounded-full bg-dark-sage w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
                   Explorá nuestros faciales
                 </Link>
@@ -294,7 +294,7 @@ export default function LandingPage() {
                 </p>
                 <Link 
                   href="/tratamientos/tratamientos-corporales" 
-                  className="inline-flex items-center justify-center border border-dark-sage text-dark-sage hover:bg-dark-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
+                  className="inline-flex items-center justify-center bg-sage hover:bg-dark-sage text-white rounded-full bg-dark-sage w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
                   Conocé las opciones corporales
                 </Link>
@@ -317,7 +317,7 @@ export default function LandingPage() {
                 <p className="text-sage mb-4 text-sm sm:text-base">Cuidado de manos, perfilado y lifting de pestañas para realzar tu mirada y lucir un estilo cuidado al detalle.</p>
                 <Link 
                   href="/tratamientos/belleza" 
-                  className="inline-flex items-center justify-center border border-dark-sage text-dark-sage hover:bg-dark-sage hover:text-white rounded-full bg-transparent w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
+                  className="inline-flex items-center justify-center bg-sage hover:bg-dark-sage text-white rounded-full bg-dark-sage w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
                   Realzá tu mirada y mano
                 </Link>
@@ -352,7 +352,6 @@ export default function LandingPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <span className="text-2xl">🎉</span>
                 </div>
               </div>
               <CardContent className="p-6 sm:p-8">
@@ -382,7 +381,6 @@ export default function LandingPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <span className="text-2xl">👯‍♀️</span>
                 </div>
               </div>
               <CardContent className="p-6 sm:p-8">
@@ -412,7 +410,6 @@ export default function LandingPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <span className="text-2xl">💕</span>
                 </div>
               </div>
               <CardContent className="p-6 sm:p-8">
@@ -587,7 +584,7 @@ export default function LandingPage() {
                   <MessageCircle className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">WhatsApp</h3>
-                <p className="text-sage mb-4 text-sm sm:text-base">Reserva tu turno por WhatsApp</p>
+                <p className="text-sage mb-10 text-sm sm:text-base">Reserva tu turno por WhatsApp</p>
                 <Button 
                   className="bg-green-600 hover:bg-green-700 text-white rounded-full w-full text-sm sm:text-base"
                   onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?', '_blank')}
@@ -603,7 +600,7 @@ export default function LandingPage() {
                   <Instagram className="h-6 w-6 sm:h-8 sm:w-8 text-pink-600" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-dark-sage mb-3 sm:mb-4">Instagram</h3>
-                <p className="text-sage mb-4 text-sm sm:text-base">Síguenos en redes sociales</p>
+                <p className="text-sage mb-10 text-sm sm:text-base">Síguenos en redes sociales <br /> </p>
                 <Button 
                   className="bg-pink-600 hover:bg-pink-700 text-white rounded-full w-full text-sm sm:text-base"
                   onClick={() => window.open('https://instagram.com/cuerpoyarmonia', '_blank')}

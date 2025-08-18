@@ -1,6 +1,6 @@
 1. git status
 2. git add .
-3. git commit -m "Actualizo tiempos tratamientos"
+3. git commit -m "Actualizacion favicon y opengraph"
 4. git push origin main
 
 
