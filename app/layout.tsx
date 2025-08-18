@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   title: "Cuerpo y Armonía - Centro de Estética Integral en Núñez",
   description: "Centro de estética integral en Núñez, Buenos Aires. 15 años de experiencia en tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura.",
   icons: {
-    icon: '/logo-no-letter.svg',
-    shortcut: '/logo-no-letter.svg',
-    apple: '/logo-no-letter.svg',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   keywords: [
     "centro de estética",
