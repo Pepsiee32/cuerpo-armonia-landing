@@ -2,8 +2,8 @@ import { Metadata } from "next"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Cuerpo y Armonía - Centro de Estética Integral en Nuñez",
-    description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
+    title: "Cuerpo y Armonía - Centro de Estética Integral en Núñez",
+    description: "Centro de estética integral en Núñez, Buenos Aires. 15 años de experiencia en tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura.",
     keywords: [
       "centro de estética",
       "tratamientos faciales",
@@ -37,8 +37,8 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: '/',
     },
     openGraph: {
-      title: "Cuerpo y Armonía - Centro de Estética Integral en Nuñez",
-      description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
+      title: "Cuerpo y Armonía - Centro de Estética Integral en Núñez",
+      description: "Centro de estética integral en Núñez, Buenos Aires. 15 años de experiencia en tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura.",
       url: 'https://cuerpoyarmonia.com.ar',
       siteName: 'Cuerpo y Armonía',
       images: [
@@ -54,8 +54,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: "Cuerpo y Armonía - Centro de Estética Integral en Nuñez",
-      description: "Centro de estética integral en Núñez, Buenos Aires. Tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura. 15 años de experiencia con atención personalizada y profesional.",
+      title: "Cuerpo y Armonía - Centro de Estética Integral en Núñez",
+      description: "Centro de estética integral en Núñez, Buenos Aires. 15 años de experiencia en tratamientos faciales, corporales, depilación láser, masajes, manicura y pedicura.",
       images: ['/logo-web.svg'],
       creator: '@cuerpoyarmonia',
     },
