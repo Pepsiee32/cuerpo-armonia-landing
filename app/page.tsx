@@ -99,7 +99,7 @@ export default function LandingPage() {
     {
       question: "¿Necesito reservar un turno previamente?",
       answer:
-        "Sí, recomendamos reservar un turno previamente para garantizar la disponibilidad del tratamiento deseado y brindarle la mejor atención personalizada.",
+        "Sí, para brindarte una mejor atención, trabajamos únicamente con turnos programados. Comunicate previamente para coordinar la cita.",
     },
     {
       question: "¿Cómo saco un turno?",
@@ -109,7 +109,7 @@ export default function LandingPage() {
     {
       question: "¿Qué métodos de pago aceptan?",
       answer:
-        "Aceptamos efectivo, tarjetas de débito y transferencias bancarias. También contamos con promociones y Gift Cards.",
+        "Aceptamos efectivo, mercado pago y transferencias bancarias. También contamos con promociones y Gift Cards.",
     },
     {
       question: "¿Qué tipo de tratamientos ofrecen?",
@@ -357,7 +357,7 @@ export default function LandingPage() {
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-dark-sage mb-3">SPA Party</h3>
                 <p className="text-sage mb-6 text-sm sm:text-base leading-relaxed">
-                  Celebra el cumpleaños de las más pequeñas con una experiencia mágica. Maquillaje, manicura, peinados y tratamientos especiales para que se sientan como princesas.
+                  Celebra el cumpleaños de las más pequeñas con una experiencia mágica. Maquillaje, manicura, peinados y tratamientos especiales para que se sientan como princesas. Este servicio se realiza  a domicilio.
                 </p>
                 <Button 
                   className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
@@ -386,7 +386,7 @@ export default function LandingPage() {
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-dark-sage mb-3">SPA con Amigas</h3>
                 <p className="text-sage mb-6 text-sm sm:text-base leading-relaxed">
-                  Disfruta de un día completo de relax y belleza con tus mejores amigas. Incluye masaje descontracturante, presoterapia, limpieza de cutis y merienda.
+                  Disfruta de un día  de relax y belleza con tus mejores amigas. Masaje descontracturante, presoterapia, limpieza de cutis y merienda. Perfecto para desconectarse y disfrutar de un plan diferente.
                 </p>
                 <Button 
                   className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
@@ -415,7 +415,7 @@ export default function LandingPage() {
               <CardContent className="p-6 sm:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-dark-sage mb-3">SPA en Pareja</h3>
                 <p className="text-sage mb-6 text-sm sm:text-base leading-relaxed">
-                Comparte un momento romántico y relajante con tu pareja. Incluye masaje descontracturante, presoterapia, limpieza de cutis y merienda.  
+                 Comparte un momento romántico y relajante con tu pareja. Masaje descontracturante, presoterapia, limpieza de cutis y merienda. Perfecto para celebrar una ocasión especial o disfrutar el presente.
                 </p>
                 <Button 
                   className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
