@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import Script from "next/script";
+
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600"] })
 
@@ -96,6 +98,19 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo-no-letter.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/logo-no-letter.svg" />
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NZ0MNES51Y"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NZ0MNES51Y');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
