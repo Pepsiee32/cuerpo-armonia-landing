@@ -131,6 +131,33 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
+        {/* WhatsApp click tracking (Meta Pixel custom event) */}
+        <Script id="fb-whatsapp-click" strategy="afterInteractive">
+          {`
+            (function(){
+              function handleClick(event){
+                var target = event.target;
+                while (target && target !== document) {
+                  if (target.tagName === 'A') {
+                    var href = target.getAttribute('href') || '';
+                    if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+                      if (typeof fbq === 'function') {
+                        try {
+                          fbq('trackCustom', 'WhatsAppClick', {
+                            href: href
+                          });
+                        } catch (e) {}
+                      }
+                      break;
+                    }
+                  }
+                  target = target.parentNode;
+                }
+              }
+              document.addEventListener('click', handleClick, true);
+            })();
+          `}
+        </Script>
         {/* End Meta Pixel Code */}
         <script
           type="application/ld+json"
