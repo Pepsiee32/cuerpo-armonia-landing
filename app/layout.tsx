@@ -140,7 +140,7 @@ export default function RootLayout({
                 while (target && target !== document) {
                   if (target.tagName === 'A') {
                     var href = target.getAttribute('href') || '';
-                    if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) {
+                    if (href.indexOf('wa.me') !== -1) {
                       if (typeof fbq === 'function') {
                         try {
                           fbq('trackCustom', 'WhatsAppClick', {
