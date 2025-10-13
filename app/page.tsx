@@ -187,7 +187,14 @@ export default function LandingPage() {
           <Button
             size="lg"
             className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-medium mb-10"
-            onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
           >
             <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             Reservar Turno
@@ -361,7 +368,14 @@ export default function LandingPage() {
                 </p>
                 <Button 
                   className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
-                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20Party%20para%20cumpleaños%20de%20nenas.%20¿Podés%20darme%20más%20información?', '_blank')}
+                  onClick={() => {
+                    const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20Party%20para%20cumpleaños%20de%20nenas.%20¿Podés%20darme%20más%20información?';
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                    }
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                  }}
                 >
                   Reservar SPA Party
                 </Button>
@@ -390,7 +404,14 @@ export default function LandingPage() {
                 </p>
                 <Button 
                   className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
-                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20con%20amigas.%20¿Podés%20darme%20más%20información%20y%20precios?', '_blank')}
+                  onClick={() => {
+                    const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20con%20amigas.%20¿Podés%20darme%20más%20información%20y%20precios?';
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                    }
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                  }}
                 >
                   Reservar SPA con Amigas
                 </Button>
@@ -419,7 +440,14 @@ export default function LandingPage() {
                 </p>
                 <Button 
                   className="w-full bg-dark-sage hover:bg-sage text-white rounded-full py-3 text-sm sm:text-base"
-                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20en%20pareja.%20¿Podés%20darme%20más%20información%20y%20precios?', '_blank')}
+                  onClick={() => {
+                    const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20consultar%20sobre%20el%20SPA%20en%20pareja.%20¿Podés%20darme%20más%20información%20y%20precios?';
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                    }
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                  }}
                 >
                   Reservar SPA en Pareja
                 </Button>
@@ -508,7 +536,14 @@ export default function LandingPage() {
                   Nuestro equipo de profesionales altamente capacitados aplica técnicas efectivas y productos de calidad, brindando resultados reales en un ambiente de total relajación y confort.
                   </p>
                   <Button className="bg-dark-sage hover:bg-sage text-white rounded-full px-6 sm:px-8 py-3 text-sm sm:text-base"
-                    onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?', '_blank')}
+                    onClick={() => {
+                      const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?';
+                      if (typeof (window as any).fbq === 'function') {
+                        (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                        (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                      }
+                      window.open(url, '_blank', 'noopener,noreferrer');
+                    }}
                   >
                     Viví la experiencia Cuerpo y Armonia
                   </Button>
@@ -587,7 +622,14 @@ export default function LandingPage() {
                 <p className="text-sage mb-10 text-sm sm:text-base">Reserva tu turno por WhatsApp</p>
                 <Button 
                   className="bg-green-600 hover:bg-green-700 text-white rounded-full w-full text-sm sm:text-base"
-                  onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?', '_blank')}
+                  onClick={() => {
+                    const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno%20en%20Cuerpo%20y%20Armonia.%20¿Podés%20decirme%20qué%20días%20y%20horarios%20hay%20disponibles?';
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                    }
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                  }}
                 >
                   Consultá disponibilidad
                 </Button>
@@ -689,7 +731,14 @@ export default function LandingPage() {
 
       {/* Floating WhatsApp Button */}
       <button
-        onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+        onClick={() => {
+          const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+          if (typeof (window as any).fbq === 'function') {
+            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+          }
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }}
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Contactar por WhatsApp"
       >

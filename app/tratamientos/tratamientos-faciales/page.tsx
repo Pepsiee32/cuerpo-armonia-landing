@@ -100,7 +100,14 @@ export default function TratamientosFaciales() {
           </div>
           <Button
             className="bg-sage hover:bg-dark-sage text-white rounded-full text-sm sm:text-base px-4 sm:px-6 py-3 min-h-[44px]"
-            onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
             aria-label="Reservar turno por WhatsApp"
           >
             <MessageCircle className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
@@ -122,7 +129,12 @@ export default function TratamientosFaciales() {
             <Button
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
-              onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+              onClick={() => {
+                const section = document.getElementById('paquetes-especiales-faciales');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
               aria-label="Consultar disponibilidad por WhatsApp"
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -216,7 +228,12 @@ export default function TratamientosFaciales() {
                           const whatsappNumber = treatment.name === "Crioradiofrecuencia Facial" 
                             ? "5491140873791" // Reemplazar con el número específico que desees
                             : "5491163746069";
-                          window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
+                          const url = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+                          if (typeof (window as any).fbq === 'function') {
+                            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                          }
+                          window.open(url, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label={`Reservar turno para ${treatment.name}`}
                       >
@@ -270,7 +287,12 @@ export default function TratamientosFaciales() {
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Renovación Facial Profunda\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                    const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                    }
+                    window.open(urlPack, '_blank', 'noopener,noreferrer');
                   }}
                   aria-label="Consultar paquete renovación facial profunda"
                 >
@@ -306,7 +328,12 @@ export default function TratamientosFaciales() {
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Brillo y Rejuvenecimiento\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                    const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                    }
+                    window.open(urlPack, '_blank', 'noopener,noreferrer');
                   }}
                   aria-label="Consultar paquete brillo y rejuvenecimiento"
                 >
@@ -345,7 +372,12 @@ export default function TratamientosFaciales() {
                         className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Renovación Facial Profunda\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                          const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                          if (typeof (window as any).fbq === 'function') {
+                            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                          }
+                          window.open(urlPack, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label="Consultar paquete renovación facial profunda"
                       >
@@ -382,7 +414,12 @@ export default function TratamientosFaciales() {
                         className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el \"Paquete Brillo y Rejuvenecimiento\" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                          const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                          if (typeof (window as any).fbq === 'function') {
+                            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                          }
+                          window.open(urlPack, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label="Consultar paquete brillo y rejuvenecimiento"
                       >

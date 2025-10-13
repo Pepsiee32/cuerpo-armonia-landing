@@ -154,7 +154,14 @@ export default function CuidadoUnas() {
           </div>
           <Button
             className="bg-sage hover:bg-dark-sage text-white rounded-full text-sm sm:text-base px-4 sm:px-6 py-3 min-h-[44px]"
-            onClick={() => window.open('https://wa.me/5491166108438?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491166108438?text=Hola,%20quiero%20reservar%20un%20turno';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
             aria-label="Reservar turno por WhatsApp"
           >
             <MessageCircle className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
@@ -176,7 +183,14 @@ export default function CuidadoUnas() {
             <Button
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base"
-              onClick={() => window.open('https://wa.me/5491166108438?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+              onClick={() => {
+                const url = 'https://wa.me/5491166108438?text=Hola,%20quiero%20reservar%20un%20turno';
+                if (typeof (window as any).fbq === 'function') {
+                  (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                  (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                }
+                window.open(url, '_blank', 'noopener,noreferrer');
+              }}
               aria-label="Consultar disponibilidad por WhatsApp"
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -283,7 +297,12 @@ export default function CuidadoUnas() {
                       className="bg-sage hover:bg-dark-sage text-white rounded-full text-sm sm:text-base px-6 sm:px-8 py-3 min-h-[44px]"
                       onClick={() => {
                         const mensaje = encodeURIComponent(`¡Hola! Quiero reservar un turno para ${treatment.name}.`);
-                        window.open(`https://wa.me/5491166108438?text=${mensaje}`, "_blank");
+                        const url = `https://wa.me/5491166108438?text=${mensaje}`;
+                        if (typeof (window as any).fbq === 'function') {
+                          (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                          (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                        }
+                        window.open(url, '_blank', 'noopener,noreferrer');
                       }}
                       aria-label={`Reservar turno para ${treatment.name}`}
                     >
@@ -435,7 +454,14 @@ export default function CuidadoUnas() {
             <Button
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
-              onClick={() => window.open('https://wa.me/5491166108438?text=¡Hola!%20Quisiera%20reservar%20una%20cita%20para%20un%20servicio%20de%20belleza%20(uñas%2C%20cejas%20o%20pestañas).%20¿Podrían%20contarme%20la%20disponibilidad%3F', '_blank')}
+              onClick={() => {
+                const url = 'https://wa.me/5491166108438?text=¡Hola!%20Quisiera%20reservar%20una%20cita%20para%20un%20servicio%20de%20belleza%20(uñas%2C%20cejas%20o%20pestañas).%20¿Podrían%20contarme%20la%20disponibilidad%3F';
+                if (typeof (window as any).fbq === 'function') {
+                  (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                  (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                }
+                window.open(url, '_blank', 'noopener,noreferrer');
+              }}
               aria-label="Reservar cita para servicio de belleza por WhatsApp"
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -463,7 +489,14 @@ export default function CuidadoUnas() {
           </div>
           <Button
             className="bg-green-600 hover:bg-green-700 text-white rounded-full text-sm sm:text-base"
-            onClick={() => window.open('https://wa.me/5491166108438?text=¡Hola!%20Me%20gustaría%20recibir%20asesoramiento%20sobre%20los%20servicios%20de%20belleza%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20ayudarme%20a%20elegir%20el%20más%20adecuado%20para%20mí%3F', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491166108438?text=¡Hola!%20Me%20gustaría%20recibir%20asesoramiento%20sobre%20los%20servicios%20de%20belleza%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20ayudarme%20a%20elegir%20el%20más%20adecuado%20para%20mí%3F';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
             aria-label="Consultar asesoramiento sobre servicios de belleza por WhatsApp"
           >
             <MessageCircle className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />

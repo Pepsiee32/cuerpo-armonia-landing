@@ -119,7 +119,14 @@ export default function TratamientosCorporales() {
           </div>
           <Button
             className="bg-sage hover:bg-dark-sage text-white rounded-full text-sm sm:text-base px-4 sm:px-6 py-3 min-h-[44px]"
-            onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
             aria-label="Reservar turno por WhatsApp"
           >
             <MessageCircle className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
@@ -141,7 +148,14 @@ export default function TratamientosCorporales() {
             <Button
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
-              onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+              onClick={() => {
+                const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+                if (typeof (window as any).fbq === 'function') {
+                  (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                  (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                }
+                window.open(url, '_blank', 'noopener,noreferrer');
+              }}
               aria-label="Consultar disponibilidad por WhatsApp"
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -255,7 +269,12 @@ export default function TratamientosCorporales() {
                               const mensaje = encodeURIComponent("¡Hola! Quiero consultar por depilación.");
                               // Número específico para depilación
                               const whatsappNumber = "5491140873791";
-                              window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
+                              const url = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+                              if (typeof (window as any).fbq === 'function') {
+                                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                              }
+                              window.open(url, '_blank', 'noopener,noreferrer');
                             }}
                             aria-label="Consultar por depilación por WhatsApp"
                           >
@@ -272,7 +291,12 @@ export default function TratamientosCorporales() {
                             const whatsappNumber = ["Crioradiofrecuencia Corporal + Facial", "Himfu Corporal"].includes(treatment.name)
                               ? "5491140873791" // Número específico para estos tratamientos
                               : "5491163746069";
-                            window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
+                            const url = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+                            if (typeof (window as any).fbq === 'function') {
+                              (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                              (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                            }
+                            window.open(url, '_blank', 'noopener,noreferrer');
                           }}
                           aria-label={`Reservar turno para ${treatment.name}`}
                         >
@@ -332,7 +356,12 @@ export default function TratamientosCorporales() {
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Equilibrio y Bienestar" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                    const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                    }
+                    window.open(urlPack, '_blank', 'noopener,noreferrer');
                   }}
                   aria-label="Consultar paquete equilibrio y bienestar"
                 >
@@ -367,7 +396,12 @@ export default function TratamientosCorporales() {
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Detox Circulatorio Integral" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                    const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                    }
+                    window.open(urlPack, '_blank', 'noopener,noreferrer');
                   }}
                   aria-label="Consultar paquete detox circulatorio integral"
                 >
@@ -396,7 +430,12 @@ export default function TratamientosCorporales() {
                   className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                   onClick={() => {
                     const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Intensivo Descontracturante" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                    window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                    const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                    if (typeof (window as any).fbq === 'function') {
+                      (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                      (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                    }
+                    window.open(urlPack, '_blank', 'noopener,noreferrer');
                   }}
                   aria-label="Consultar Paquete Intensivo Descontracturante"
                 >
@@ -438,7 +477,12 @@ export default function TratamientosCorporales() {
                         className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Equilibrio y Bienestar" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                          const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                          if (typeof (window as any).fbq === 'function') {
+                            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                          }
+                          window.open(urlPack, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label="Consultar paquete equilibrio y bienestar"
                       >
@@ -472,7 +516,12 @@ export default function TratamientosCorporales() {
                         className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Detox Circulatorio Integral" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                          const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                          if (typeof (window as any).fbq === 'function') {
+                            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                          }
+                          window.open(urlPack, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label="Consultar paquete detox circulatorio integral"
                       >
@@ -500,7 +549,12 @@ export default function TratamientosCorporales() {
                         className="w-full bg-sage hover:bg-dark-sage text-white rounded-full font-medium text-sm sm:text-base"
                         onClick={() => {
                           const mensaje = encodeURIComponent(`¡Hola! Estoy interesado/a en el "Paquete Intensivo Descontracturante" ¿Podrían contarme más sobre las opciones y disponibilidad?`);
-                          window.open(`https://wa.me/5491163746069?text=${mensaje}`, "_blank");
+                          const urlPack = `https://wa.me/5491163746069?text=${mensaje}`;
+                          if (typeof (window as any).fbq === 'function') {
+                            (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                            (window as any).fbq('trackCustom', 'WhatsAppClick', { href: urlPack });
+                          }
+                          window.open(urlPack, '_blank', 'noopener,noreferrer');
                         }}
                         aria-label="Consultar Paquete Intensivo Descontracturante"
                       >
@@ -571,7 +625,14 @@ export default function TratamientosCorporales() {
             <Button
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
-              onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20sesión%20corporal%20en%20Cuerpo%20y%20Armonia.%20¿Podrían%20confirmarme%20la%20disponibilidad?', '_blank')}
+              onClick={() => {
+                const url = 'https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20sesión%20corporal%20en%20Cuerpo%20y%20Armonia.%20¿Podrían%20confirmarme%20la%20disponibilidad?';
+                if (typeof (window as any).fbq === 'function') {
+                  (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                  (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                }
+                window.open(url, '_blank', 'noopener,noreferrer');
+              }}
               aria-label="Reservar sesión corporal por WhatsApp"
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -599,7 +660,14 @@ export default function TratamientosCorporales() {
           </div>
           <Button
             className="bg-green-600 hover:bg-green-700 text-white rounded-full font-medium text-sm sm:text-base"
-            onClick={() => window.open('https://wa.me/5491163746069?text=Hola!%20Me%20gustaría%20consultar%20por%20los%20tratamientos%20corporales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20asesorarme%20para%20elegir%20el%20más%20adecuado%20para%20mí?', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491163746069?text=Hola!%20Me%20gustaría%20consultar%20por%20los%20tratamientos%20corporales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20asesorarme%20para%20elegir%20el%20más%20adecuado%20para%20mí?';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
             aria-label="Consultar asesoramiento sobre tratamientos corporales por WhatsApp"
           >
             <MessageCircle className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
