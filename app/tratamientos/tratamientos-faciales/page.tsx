@@ -495,7 +495,14 @@ export default function TratamientosFaciales() {
             <Button
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
-              onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20sesión%20para%20un%20tratamiento%20facial.%20¿Podrían%20contarme%20la%20disponibilidad%3F', '_blank')}
+              onClick={() => {
+                const url = 'https://wa.me/5491163746069?text=¡Hola!%20Quisiera%20reservar%20una%20sesión%20para%20un%20tratamiento%20facial.%20¿Podrían%20contarme%20la%20disponibilidad%3F';
+                if (typeof (window as any).fbq === 'function') {
+                  (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                  (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                }
+                window.open(url, '_blank', 'noopener,noreferrer');
+              }}
               aria-label="Reservar sesión de tratamiento facial por WhatsApp"
             >
               <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -523,7 +530,14 @@ export default function TratamientosFaciales() {
           </div>
           <Button
             className="bg-green-600 hover:bg-green-700 text-white rounded-full text-sm sm:text-base"
-            onClick={() => window.open('https://wa.me/5491163746069?text=¡Hola!%20Me%20gustaría%20recibir%20asesoramiento%20sobre%20los%20tratamientos%20faciales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20ayudarme%20a%20elegir%20el%20más%20adecuado%20para%20mí%3F', '_blank')}
+            onClick={() => {
+              const url = 'https://wa.me/5491163746069?text=¡Hola!%20Me%20gustaría%20recibir%20asesoramiento%20sobre%20los%20tratamientos%20faciales%20de%20Cuerpo%20y%20Armonia.%20¿Podrían%20ayudarme%20a%20elegir%20el%20más%20adecuado%20para%20mí%3F';
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+              }
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
             aria-label="Consultar asesoramiento sobre tratamientos faciales por WhatsApp"
           >
             <MessageCircle className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />

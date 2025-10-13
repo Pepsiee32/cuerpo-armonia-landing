@@ -88,7 +88,14 @@ export function SmoothNavigation() {
              {/* CTA Button */}
              <Button
                className="bg-sage hover:bg-dark-sage text-white rounded-full text-sm px-4 sm:px-6 py-2 min-h-[40px] transition-all duration-200 hover:scale-105"
-               onClick={() => window.open('https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno', '_blank')}
+               onClick={() => {
+                 const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+                 if (typeof (window as any).fbq === 'function') {
+                   (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                   (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
+                 }
+                 window.open(url, '_blank', 'noopener,noreferrer');
+               }}
                aria-label="Reservar turno por WhatsApp"
              >
                <MessageCircle className="mr-2 h-4 w-4" />
