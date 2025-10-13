@@ -130,10 +130,12 @@ export default function TratamientosFaciales() {
               size="lg"
               className="bg-sage hover:bg-dark-sage text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base"
               onClick={() => {
-                const section = document.getElementById('paquetes-especiales-faciales');
-                if (section) {
-                  section.scrollIntoView({ behavior: 'smooth' });
+                const url = 'https://wa.me/5491163746069?text=Hola,%20quiero%20reservar%20un%20turno';
+                if (typeof (window as any).fbq === 'function') {
+                  (window as any).fbq('track', 'Contact', { channel: 'WhatsApp' });
+                  (window as any).fbq('trackCustom', 'WhatsAppClick', { href: url });
                 }
+                window.open(url, '_blank', 'noopener,noreferrer');
               }}
               aria-label="Consultar disponibilidad por WhatsApp"
             >
