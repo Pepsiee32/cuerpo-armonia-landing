@@ -278,7 +278,7 @@ export default function LandingPage() {
                   href="/tratamientos/tratamientos-faciales" 
                   className="inline-flex items-center justify-center bg-sage hover:bg-dark-sage text-white rounded-full bg-dark-sage w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
-                  Explorá nuestros faciales
+                  Ver Tratamientos Faciales
                 </Link>
               </CardContent>
             </Card>
@@ -303,7 +303,7 @@ export default function LandingPage() {
                   href="/tratamientos/tratamientos-corporales" 
                   className="inline-flex items-center justify-center bg-sage hover:bg-dark-sage text-white rounded-full bg-dark-sage w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
-                  Conocé las opciones corporales
+                  Ver Tratamientos Corporales
                 </Link>
               </CardContent>
             </Card>
@@ -326,7 +326,7 @@ export default function LandingPage() {
                   href="/tratamientos/belleza" 
                   className="inline-flex items-center justify-center bg-sage hover:bg-dark-sage text-white rounded-full bg-dark-sage w-full text-sm sm:text-base min-h-[44px] py-3 px-4 transition-colors duration-200 font-medium"
                 >
-                  Realzá tu mirada y mano
+                  Ver Servicios de Belleza
                 </Link>
               </CardContent>
             </Card>
