@@ -13,7 +13,7 @@ export default function CuidadoUnas() {
     {
       name: "Esmaltado Tradicional de Manos",
       description: "Manicura completa con esmaltado tradicional.",
-      price: "$17.000",
+      price: "$18.000",
       duration: "60 min",
       benefits: ["Uñas perfectas", "Variedad de colores", "Cuidado completo", "Acabado profesional"],
       icon: Palette,
@@ -22,7 +22,7 @@ export default function CuidadoUnas() {
     {
       name: "Esmaltado Semipermanente de Manos",
       description: "Manicura con esmaltado semipermanente de larga duración.",
-      price: "$20.000",
+      price: "$22.000",
       duration: "60 min",
       benefits: [ "Brillo intenso", "No se descascara", "Secado inmediato"],
       icon: Palette,
@@ -31,7 +31,7 @@ export default function CuidadoUnas() {
     {
       name: "Capping",
       description: "Refuerzo de la uña natural con gel para lograr mayor resistencia y durabilidad sin extensión.",
-      price: "$23.000",
+      price: "$25.000",
       duration: "90 min",
       benefits: ["Refuerza la uña natural", "Evita quiebres", "Duración prolongada", "Acabado prolijo"],
       icon: Star,
@@ -49,7 +49,7 @@ export default function CuidadoUnas() {
     {
       name: "Belleza de Pies + Tradicional",
       description: "Pedicura completa con esmaltado tradicional.",
-      price: "$20.000",
+      price: "$22.000",
       duration: "90 min",
       benefits: ["Pies suaves", "Uñas perfectas", "Relajación", "Cuidado completo"],
       icon: Sparkles,
@@ -58,7 +58,7 @@ export default function CuidadoUnas() {
     {
       name: "Belleza de Pies + Semipermanente",
       description: "Pedicura completa con esmaltado semipermanente.",
-      price: "$22.000",
+      price: "$25.000",
       duration: "90 min",
       benefits: ["Larga duración", "Pies impecables", "Resistente al agua", "Brillo duradero"],
       icon: Sparkles,
