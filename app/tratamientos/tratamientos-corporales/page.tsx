@@ -13,7 +13,7 @@ export default function TratamientosCorporales() {
     {
       name: "Masaje Descontracturante",
       description: "Masaje enfocado en liberar contracturas y tensión muscular, mejorando la movilidad.",
-      price: "$25.000",
+      price: "$28.000",
       duration: "60 min",
       benefits: ["Alivia tensiones", "Mejora circulación", "Relajación profunda", "Bienestar general"],
       icon: Hand,
@@ -24,7 +24,7 @@ export default function TratamientosCorporales() {
     {
       name: "Drenaje Linfático Manual",
       description: "Técnica suave que estimula el sistema linfático y mejora la eliminación de toxinas.",
-      price: "$25.000",
+      price: "$28.000",
       duration: "45 min",
       benefits: ["Reduce inflamación","Mejora la circulación", "Desintoxica el cuerpo", "Ideal post operatorios o retención de líquidos"],
       icon: Droplets,
@@ -33,7 +33,7 @@ export default function TratamientosCorporales() {
     {
       name: "Presoterapia + Ondas Rusas",
       description: "Combinación de presoterapia para eliminar líquidos y ondas rusas para tonificar y estimular los músculos.",
-      price: "$25.000",
+      price: "$28.000",
       duration: "60 min",
       benefits: [
         "Mejora circulación y oxigenación",
@@ -94,7 +94,7 @@ export default function TratamientosCorporales() {
     {
       name: "Armonización + Reiki",
       description: "Terapia energética para equilibrar cuerpo y mente con péndulo hebreo y reiki.",
-      price: "$22.000",
+      price: "$25.000",
       duration: "60 min",
       benefits: ["Relajación profunda", "Equilibrio emocional", "Reducción del estrés", "Renovación energética"],
       icon: Sun,
@@ -337,8 +337,8 @@ export default function TratamientosCorporales() {
                       <br></br>
                       <br></br>
                     </p>
-                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$87.000</div>
-                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $97.000</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$98.000</div>
+                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $109.000</p>
                   </div>
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <div className="flex items-center text-xs sm:text-sm text-sage">
@@ -377,8 +377,8 @@ export default function TratamientosCorporales() {
                     <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
                     <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Detox Circulatorio Integral</h3>
                     <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para activar circulación, eliminar líquidos y relajar el cuerpo</p>
-                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
-                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$100.000</div>
+                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $112.000</p>
                   </div>
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <div className="flex items-center text-xs sm:text-sm text-sage">
@@ -417,8 +417,8 @@ export default function TratamientosCorporales() {
                     <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Alivio Muscular</Badge>
                     <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Intensivo Descontracturante</h3>
                     <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para aliviar tensión muscular, mejorar la circulación y relajar el cuerpo.</p>
-                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
-                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$100.000</div>
+                    <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $112.000</p>
                   </div>
                   <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     <div className="flex items-center text-xs sm:text-sm text-sage">
@@ -459,8 +459,8 @@ export default function TratamientosCorporales() {
                           <br></br>
                           <br></br>
                         </p>
-                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$87.000</div>
-                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $97.000</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$98.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $109.000</p>
                       </div>
                       <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                         <div className="flex items-center text-xs sm:text-sm text-sage">
@@ -498,8 +498,8 @@ export default function TratamientosCorporales() {
                         <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Resultados Visibles</Badge>
                         <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Detox Circulatorio Integral</h3>
                         <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para activar circulación, eliminar líquidos y relajar el cuerpo</p>
-                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
-                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$100.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $112.000</p>
                       </div>
                       <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                         <div className="flex items-center text-xs sm:text-sm text-sage">
@@ -537,8 +537,8 @@ export default function TratamientosCorporales() {
                         <Badge className="bg-orange-100 text-orange-600 border-orange-200 mb-3 sm:mb-4">Alivio Muscular</Badge>
                         <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Intensivo Descontracturante</h3>
                         <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">4 sesiones diseñadas para aliviar tensión muscular acumulada, mejorar la circulación y relajar profundamente el cuerpo.</p>
-                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$90.000</div>
-                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $100.000</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$100.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $112.000</p>
                       </div>
                       <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                         <div className="flex items-center text-xs sm:text-sm text-sage">
