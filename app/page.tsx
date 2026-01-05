@@ -722,7 +722,7 @@ export default function LandingPage() {
 
           <div className="border-t border-off-white/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-off-white/60 text-xs sm:text-sm pb-6 sm:pb-0">
             <p>
-              &copy; 2025 Cuerpo y Armonia. Todos los derechos reservados. |
+              &copy; 2026 Cuerpo y Armonia. Todos los derechos reservados. |
               <Link href="/legales" className="underline hover:text-white ml-1">Legales</Link>
             </p>
           </div>
