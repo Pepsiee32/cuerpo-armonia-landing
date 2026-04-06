@@ -57,9 +57,9 @@ export default function TratamientosCorporales() {
       icon: Snowflake,
       image: "/optimized/crio1-optimized.webp",
       options: [
-        { label: "1 zona", price: "$33.000", duration: " 20min" },
-        { label: "2 zonas", price: "$38.000", duration: " 40min" },
-        { label: "3 zonas", price: "$42.000", duration: " 60min" }
+        { label: "1 zona", price: "$36.000", duration: " 20min" },
+        { label: "2 zonas", price: "$40.000", duration: " 40min" },
+        { label: "3 zonas", price: "$46.000", duration: " 60min" }
       ],
       zones: ["Abdomen", "Piernas", "Glúteos", "Flancos", "Brazos"]
     },    
@@ -76,9 +76,9 @@ export default function TratamientosCorporales() {
       icon: Target,
       image: "/optimized/crio1-optimized.webp",
       options: [
-        { label: "1 zona", price: "$16.000", duration: "20 min" },
-        { label: "2 zonas", price: "$21.000", duration: "40 min" },
-        { label: "3 zonas", price: "$26.000", duration: "60 min" }
+        { label: "1 zona", price: "$18.000", duration: "20 min" },
+        { label: "2 zonas", price: "$23.000", duration: "40 min" },
+        { label: "3 zonas", price: "$28.000", duration: "60 min" }
       ],
       zones: ["Abdomen", "Flancos", "Glúteos", "Piernas", "Brazos"]
     },
