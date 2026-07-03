@@ -13,7 +13,7 @@ export default function CuidadoUnas() {
     {
       name: "Esmaltado Tradicional de Manos",
       description: "Manicura completa con esmaltado tradicional.",
-      price: "$20.000",
+      price: "$22.000",
       duration: "60 min",
       benefits: ["Uñas perfectas", "Variedad de colores", "Cuidado completo", "Acabado profesional"],
       icon: Palette,
@@ -22,7 +22,7 @@ export default function CuidadoUnas() {
     {
       name: "Esmaltado Semipermanente de Manos",
       description: "Manicura con esmaltado semipermanente de larga duración.",
-      price: "$24.000",
+      price: "$27.000",
       duration: "60 min",
       benefits: [ "Brillo intenso", "No se descascara", "Secado inmediato"],
       icon: Palette,
@@ -31,7 +31,7 @@ export default function CuidadoUnas() {
     {
       name: "Capping",
       description: "Refuerzo de la uña natural con gel para lograr mayor resistencia y durabilidad sin extensión.",
-      price: "$27.000",
+      price: "$30.000",
       duration: "90 min",
       benefits: ["Refuerza la uña natural", "Evita quiebres", "Duración prolongada", "Acabado prolijo"],
       icon: Star,
@@ -40,7 +40,7 @@ export default function CuidadoUnas() {
     {
       name: "Soft Gel",
       description: "Extensión de uñas que utiliza tips de gel suave y flexible. Alternativa moderna para extensiones cómodas y elegantes.",
-      price: "$30.000",
+      price: "$35.000",
       duration: "120 min",
       benefits: ["Uñas más largas", "Mayor resistencia", "Aspecto natural", "Flexibilidad"],
       icon: Star,
@@ -49,7 +49,7 @@ export default function CuidadoUnas() {
     {
       name: "Belleza de Pies + Tradicional",
       description: "Pedicura completa con esmaltado tradicional.",
-      price: "$24.000",
+      price: "$26.000",
       duration: "90 min",
       benefits: ["Pies suaves", "Uñas perfectas", "Relajación", "Cuidado completo"],
       icon: Sparkles,
@@ -58,7 +58,7 @@ export default function CuidadoUnas() {
     {
       name: "Belleza de Pies + Semipermanente",
       description: "Pedicura completa con esmaltado semipermanente.",
-      price: "$27.000",
+      price: "$30.000",
       duration: "90 min",
       benefits: ["Larga duración", "Pies impecables", "Resistente al agua", "Brillo duradero"],
       icon: Sparkles,
@@ -67,7 +67,7 @@ export default function CuidadoUnas() {
     {
       name: "Perfilado de Cejas",
       description: "Diseño y perfilado de cejas con pinza para definir la forma perfecta.",
-      price: "Desde $8.000",
+      price: "Desde $10.000",
       duration: "30 min",
       benefits: ["Cejas definidas", "Forma perfecta", "Realza la mirada", "Resultado inmediato"],
       icon: Eye,
@@ -81,8 +81,8 @@ export default function CuidadoUnas() {
       icon: Eye,
       image: "/optimized/ceja-pesta-optimized.webp",
       options: [
-        { label: "sin tinte:", price: "$18.000", duration: "" },
-        { label: "con tinte:", price: "$20.000", duration: "" }],
+        { label: "sin tinte:", price: "$20.000", duration: "" },
+        { label: "con tinte:", price: "$25.000", duration: "" }],
     },    
     {
       name: "Lifting de Pestañas",
@@ -92,13 +92,13 @@ export default function CuidadoUnas() {
       icon: Eye,
       image: "/optimized/lifting.webp",
       options: [
-        { label: "sin tinte:", price: "$24.000", duration: "" },
-        { label: "con tinte:", price: "$27.000", duration: "" }],
+        { label: "sin tinte:", price: "$25.000", duration: "" },
+        { label: "con tinte:", price: "$30.000", duration: "" }],
     },
     {
       name: "Paquete Belleza",
       description: "4 sesiones para lucir manos, pies y mirada impecables, resaltando tu belleza natural con acabados profesionales y duraderos. \n\n Tenés hasta 45 días desde la compra para usar todas las sesiones.",
-      price: "$84.000",
+      price: "$97.000",
       duration: "60 min c/u",
       benefits: ["Esmaltado Semipermanente de Manos", "Belleza de Pies Semipermanente", "Laminado de Cejas sin Tinte", "Lifting de Pestañas con Tinte"],
       icon: Gem,
@@ -107,7 +107,7 @@ export default function CuidadoUnas() {
     {
       name: "Paquete Relax & Belleza",
       description: "4 sesiones para relajar cuerpo y renovar tu imagen: masajes para aliviar tensiones y uñas impecables con acabados duraderos. \n\n Tenés hasta 45 días desde la compra para usar todas las sesiones.",
-      price: "$100.000",
+      price: "$113.000",
       duration: "60 min c/u",
       benefits: ["2 Masajes Descontracturantes", "Esmaltado Semipermanente de Manos", "Belleza de Pies Semipermanente"],
       icon: Hand,
