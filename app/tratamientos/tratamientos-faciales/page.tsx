@@ -356,8 +356,8 @@ export default function TratamientosFaciales() {
                         <Badge className="bg-sage/10 text-sage border-sage/20 mb-3 sm:mb-4">Renovación Facial</Badge>
                         <h3 className="text-xl sm:text-2xl font-semibold text-dark-sage mb-2">Paquete Renovación Facial Profunda</h3>
                         <p className="text-sage mb-3 sm:mb-4 text-sm sm:text-base">3 sesiones diseñadas para renovar tu piel desde las capas más profundas, unificando el tono, suavizando imperfecciones y devolviendo luminosidad a tu rostro</p>
-                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$115.000</div>
-                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $128.000</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$132.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $146.000</p>
                       </div>
                       <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                         <div className="flex items-center text-xs sm:text-sm text-sage">
@@ -398,8 +398,8 @@ export default function TratamientosFaciales() {
                           <br></br>
                           <br></br>
                         </p>
-                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$125.000</div>
-                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $136.000</p>
+                        <div className="text-2xl sm:text-3xl font-bold text-dark-sage">$141.000</div>
+                        <p className="text-xs sm:text-sm text-sage line-through">Precio individual: $156.000</p>
                       </div>
                       <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                         <div className="flex items-center text-xs sm:text-sm text-sage">
